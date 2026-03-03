@@ -133,6 +133,12 @@ video {
   letter-spacing: 0.04em;
 }
 
+.phi-char {
+  font-family: "STIX Two Text", "Times New Roman", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 .brand.has-logo .brand-fallback {
   display: none;
 }
