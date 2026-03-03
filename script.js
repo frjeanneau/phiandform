@@ -46,9 +46,12 @@ document.querySelectorAll(".media-slot img").forEach((image) => {
   });
 });
 
-document.querySelectorAll(".brand-mark img").forEach((image) => {
+document.querySelectorAll(".brand-logo img").forEach((image) => {
+  const brand = image.closest(".brand");
+
   const showLogo = () => {
     image.classList.add("is-ready");
+    brand?.classList.add("has-logo");
   };
 
   if (image.complete && image.naturalWidth > 0) {
@@ -57,12 +60,12 @@ document.querySelectorAll(".brand-mark img").forEach((image) => {
 
   image.addEventListener("load", showLogo, { once: true });
   image.addEventListener("error", () => {
-    image.remove();
+    image.closest(".brand-logo")?.remove();
   });
 });
 
 document.querySelectorAll("video").forEach((video) => {
-  const frame = video.closest(".video-frame");
+  const frame = video.closest(".video-frame, .stage-media, .gallery-panel");
   const fallback = frame?.querySelector(".video-fallback");
 
   const hideFallback = () => {
@@ -71,11 +74,14 @@ document.querySelectorAll("video").forEach((video) => {
     }
   };
 
-  if (video.readyState >= 2) {
+  if (video.readyState >= 1 || video.currentSrc) {
     hideFallback();
   }
 
+  video.addEventListener("loadedmetadata", hideFallback, { once: true });
   video.addEventListener("loadeddata", hideFallback, { once: true });
+  video.addEventListener("canplay", hideFallback, { once: true });
+  video.addEventListener("playing", hideFallback, { once: true });
   video.addEventListener("error", () => {
     if (fallback) {
       fallback.hidden = false;

@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>phiandform</title>
+    <title>Phi &amp; Form</title>
     <meta
       name="description"
-      content="phiandform blends precision and atmosphere into a modern product experience."
+      content="Phi and Form is a design studio exploring the space between mathematics and visual art through apps, interaction, and geometric systems."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,237 +14,262 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;700&amp;display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico?v=4" />
+    <link rel="icon" type="image/png" href="./assets/favicon.png?v=4" />
+    <link rel="shortcut icon" href="./favicon.ico?v=4" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <div class="page-shell">
+      <div id="page-top"></div>
       <header class="site-header">
-        <a class="brand" href="#top" aria-label="phiandform home">
-          <span class="brand-mark">
-            <img src="assets/logo.svg" alt="phiandform logo" />
-            <span class="brand-mark-fallback">phi</span>
+        <a class="brand" href="#page-top" aria-label="Phi and Form home">
+          <span class="brand-logo">
+            <img src="assets/logo.png" alt="Phi and Form logo" />
           </span>
-          <span class="brand-name">phiandform</span>
+          <span class="brand-fallback">ϕ &amp; Form</span>
         </a>
         <nav class="site-nav" aria-label="Primary navigation">
-          <a href="#experience">Experience</a>
-          <a href="#showcase">Showcase</a>
+          <a href="#studio">Studio</a>
+          <a href="#apps">Apps</a>
+          <a href="#mathematics">Mathematics</a>
           <a href="#about">About</a>
         </nav>
-        <a class="button button-secondary" href="#contact">Get in touch</a>
+        <a class="button button-secondary" href="mailto:hello@phiandform.com">Get in touch</a>
       </header>
 
-      <main id="top">
-        <section class="hero section">
-          <div class="hero-copy">
-            <p class="eyebrow">Modern product site concept</p>
-            <h1>Precision, atmosphere, and motion in one clean brand surface.</h1>
+      <main>
+        <section class="section hero-home">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Mathematics as visual art</p>
+            <h1>Digital experiences shaped by geometry, pattern, and form.</h1>
             <p class="hero-text">
-              This layout is designed to sell the feel of phiandform first, then
-              back it up with clear product proof through screenshots, motion,
-              and concise story-led copy.
+              ϕ &amp; Form is a design studio exploring the space between
+              mathematics and visual art. Each app turns structure into something
+              intuitive to see, touch, and explore.
             </p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#showcase">See the product</a>
-              <a class="button button-ghost" href="#about">Read the story</a>
+              <a class="button button-primary" href="#apps">Explore the apps</a>
+              <a class="button button-ghost" href="#about">Read the studio story</a>
             </div>
-            <ul class="hero-metrics" aria-label="Product highlights">
+            <ul class="hero-metrics" aria-label="Studio highlights">
               <li>
                 <span class="metric-value">01</span>
-                <span class="metric-label">Brand-led hero narrative</span>
+                <span class="metric-label">A studio homepage that introduces the brand first</span>
               </li>
               <li>
                 <span class="metric-value">02</span>
-                <span class="metric-label">Screenshots as proof points</span>
+                <span class="metric-label">Featured app cards that scale as the catalogue grows</span>
               </li>
               <li>
                 <span class="metric-value">03</span>
-                <span class="metric-label">Short videos for texture</span>
+                <span class="metric-label">Dedicated app pages with room for the mathematics</span>
               </li>
             </ul>
           </div>
 
-          <div class="hero-visual">
+          <div class="hero-stage reveal">
             <div class="orb orb-large"></div>
             <div class="orb orb-small"></div>
-            <div class="device-card device-card-main reveal">
-              <div class="device-topline">
-                <span>Live interface preview</span>
-                <span>Replace with app screenshot</span>
+            <div class="stage-card">
+              <div class="stage-topline">
+                <span>Featured app</span>
               </div>
-              <div class="screen-grid">
-                <article class="screen-panel screen-panel-accent">
-                  <span class="panel-label">Main workflow</span>
-                  <h2>Elegant structure with room for motion.</h2>
-                </article>
-                <article class="screen-panel">
-                  <span class="panel-label">Insight block</span>
-                  <p>Use this area for a real screenshot crop or feature callout.</p>
-                </article>
-                <article class="screen-panel">
-                  <span class="panel-label">System detail</span>
-                  <p>Copy can be swapped for UI captions once assets are ready.</p>
-                </article>
+              <div class="stage-grid">
+                <div class="stage-media">
+                  <video autoplay loop muted playsinline preload="auto">
+                    <source src="assets/movie-01.mp4" type="video/mp4" />
+                    <source src="assets/movie-01.mov" type="video/quicktime" />
+                  </video>
+                  <div class="video-fallback">Add `assets/movie-01.mp4` or `assets/movie-01.mov`</div>
+                </div>
+                <div class="stage-copy">
+                  <h2>Penrose Art</h2>
+                  <p>
+                    Compose intricate tilings and discover how aperiodic
+                    geometry can become visual play.
+                  </p>
+                  <p class="stage-support">
+                    Aperiodic tilings. Symmetry and proportion. Creative composition.
+                  </p>
+                  <a class="button button-primary stage-button" href="./apps/penrose-art.html">Open app page</a>
+                </div>
               </div>
-            </div>
-            <div class="device-card device-card-float reveal">
-              <p class="mini-label">Brand cue</p>
-              <p>
-                The header will automatically switch to your real logo if you drop
-                `assets/logo.svg` into the project.
-              </p>
             </div>
           </div>
         </section>
 
-        <section class="section section-band" id="experience">
+        <section class="section" id="studio">
           <div class="section-heading reveal">
-            <p class="eyebrow">Experience</p>
-            <h2>A homepage structure that feels editorial, not templated.</h2>
+            <p class="eyebrow">Studio</p>
+            <h2>One homepage can present the studio and lead people into the apps.</h2>
           </div>
-          <div class="feature-grid">
-            <article class="feature-card reveal">
-              <p class="feature-index">01</p>
-              <h3>Hero with immediate product gravity</h3>
+          <div class="story-grid">
+            <article class="story-card reveal">
+              <p class="mini-label">The premise</p>
+              <h3>Mathematics is not only logical. It is beautiful.</h3>
               <p>
-                The first fold uses a cinematic layout: sharp typography on the left,
-                product depth on the right, and enough negative space to feel premium.
+                Phi &amp; Form treats geometry as something architectural,
+                artistic, and deeply human. The site should communicate that
+                before it starts explaining features.
               </p>
             </article>
-            <article class="feature-card reveal">
-              <p class="feature-index">02</p>
-              <h3>Screenshot-led narrative</h3>
+            <article class="story-card reveal">
+              <p class="mini-label">The structure</p>
+              <h3>Use the homepage as a curated front door.</h3>
               <p>
-                Instead of dumping a gallery, the page can frame each screenshot as a
-                proof point tied to a specific capability or user benefit.
+                The homepage presents the studio, highlights the first two apps,
+                and leaves room for a growing catalogue without feeling crowded.
               </p>
             </article>
-            <article class="feature-card reveal">
-              <p class="feature-index">03</p>
-              <h3>Motion without clutter</h3>
+            <article class="story-card reveal">
+              <p class="mini-label">The expansion path</p>
+              <h3>Each app gets its own page and its own mathematics section.</h3>
               <p>
-                Short clips sit in an art-directed film strip so the page feels alive
-                without turning into a noisy autoplay wall.
+                That keeps the homepage clean, while allowing every app to go
+                deeper into interaction, concept, and mathematical context.
               </p>
             </article>
           </div>
         </section>
 
-        <section class="section showcase-section" id="showcase">
+        <section class="section" id="apps">
           <div class="section-heading reveal">
-            <p class="eyebrow">Showcase</p>
-            <h2>Use real product visuals as the main conversion asset.</h2>
+            <p class="eyebrow">Featured Apps</p>
+            <h2>Start with two featured apps, then keep adding cards as new releases land.</h2>
           </div>
-          <div class="showcase-grid">
-            <article class="showcase-card showcase-card-large reveal">
-              <div class="card-copy">
-                <p class="mini-label">Screenshot feature</p>
-                <h3>Feature story one</h3>
+          <div class="app-grid">
+            <article class="app-card app-card-feature reveal">
+              <div class="app-media">
+                <div class="media-slot media-slot-tall">
+                  <img src="assets/screenshot-01.png" alt="Penrose Art screenshot" />
+                  <div class="media-placeholder">Add `assets/screenshot-01.png`</div>
+                </div>
+              </div>
+              <div class="app-copy">
+                <p class="mini-label">App one</p>
+                <h3>Penrose Art</h3>
                 <p>
-                  Replace this panel with a full-width screenshot and a short caption
-                  explaining what users should notice first.
+                  Create intricate compositions from aperiodic tilings and see
+                  mathematical order emerge through visual play.
                 </p>
-              </div>
-              <div class="media-slot">
-                <img
-                  src="assets/screenshot-01.png"
-                  alt="phiandform product screenshot one"
-                />
-                <div class="media-placeholder">Add `assets/screenshot-01.png`</div>
-              </div>
-            </article>
-            <article class="showcase-card reveal">
-              <div class="card-copy">
-                <p class="mini-label">Screenshot detail</p>
-                <h3>Feature story two</h3>
-              </div>
-              <div class="media-slot">
-                <img
-                  src="assets/screenshot-02.png"
-                  alt="phiandform product screenshot two"
-                />
-                <div class="media-placeholder">Add `assets/screenshot-02.png`</div>
+                <ul class="tag-list">
+                  <li>Aperiodic tilings</li>
+                  <li>Golden ratio</li>
+                  <li>Symmetry and composition</li>
+                </ul>
+                <div class="card-actions">
+                  <a class="button button-primary" href="./apps/penrose-art.html">Learn more</a>
+                  <a class="text-link" href="./apps/penrose-art.html#mathematics">View the mathematics</a>
+                </div>
               </div>
             </article>
-            <article class="showcase-card reveal">
-              <div class="card-copy">
-                <p class="mini-label">Screenshot detail</p>
-                <h3>Feature story three</h3>
+
+            <article class="app-card reveal">
+              <div class="app-media">
+                <div class="diagram-panel">
+                  <div class="diagram-ring"></div>
+                  <div class="diagram-grid"></div>
+                  <div class="diagram-copy">
+                    <p class="mini-label">Second app</p>
+                    <h3>Tessellation Lab</h3>
+                    <p>
+                      A second app page is ready for a symmetry and tiling
+                      explorer. Rename this card when the final product name is set.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div class="media-slot">
-                <img
-                  src="assets/screenshot-03.png"
-                  alt="phiandform product screenshot three"
-                />
-                <div class="media-placeholder">Add `assets/screenshot-03.png`</div>
+              <div class="app-copy">
+                <p class="mini-label">App two</p>
+                <h3>Tessellation Lab</h3>
+                <p>
+                  Explore repeating systems, rotational symmetries, and the
+                  rules that make tessellations feel both rigorous and playful.
+                </p>
+                <ul class="tag-list">
+                  <li>Tessellations</li>
+                  <li>Wallpaper symmetries</li>
+                  <li>Transformations</li>
+                </ul>
+                <div class="card-actions">
+                  <a class="button button-primary" href="./apps/tessellation-lab.html">Learn more</a>
+                  <a class="text-link" href="./apps/tessellation-lab.html#mathematics">View the mathematics</a>
+                </div>
               </div>
             </article>
           </div>
         </section>
 
-        <section class="section motion-section">
+        <section class="section" id="mathematics">
           <div class="section-heading reveal">
-            <p class="eyebrow">Motion</p>
-            <h2>Short films should punctuate the page, not overwhelm it.</h2>
+            <p class="eyebrow">Mathematics</p>
+            <h2>The site should explain the ideas without forcing all the depth onto the homepage.</h2>
           </div>
-          <div class="video-strip">
-            <article class="video-card reveal">
-              <div class="video-frame">
-                <video controls muted preload="metadata" poster="">
-                  <source src="assets/movie-01.mp4" type="video/mp4" />
-                </video>
-                <div class="video-fallback">Add `assets/movie-01.mp4`</div>
-              </div>
-              <h3>Product motion clip</h3>
+          <div class="math-grid">
+            <article class="math-card reveal">
+              <p class="feature-index">01</p>
+              <h3>Keep the homepage concise.</h3>
+              <p>
+                The landing page should introduce the mathematical lens, not
+                become a textbook. Its job is to orient, intrigue, and guide.
+              </p>
             </article>
-            <article class="video-card reveal">
-              <div class="video-frame">
-                <video controls muted preload="metadata" poster="">
-                  <source src="assets/movie-02.mp4" type="video/mp4" />
-                </video>
-                <div class="video-fallback">Add `assets/movie-02.mp4`</div>
-              </div>
-              <h3>Interaction close-up</h3>
+            <article class="math-card reveal">
+              <p class="feature-index">02</p>
+              <h3>Give each app its own mathematical narrative.</h3>
+              <p>
+                Penrose tilings, tessellations, symmetry groups, proportion, or
+                transformations can each live on the app page where they matter.
+              </p>
             </article>
-            <article class="video-card reveal">
-              <div class="video-frame">
-                <video controls muted preload="metadata" poster="">
-                  <source src="assets/movie-03.mp4" type="video/mp4" />
-                </video>
-                <div class="video-fallback">Add `assets/movie-03.mp4`</div>
-              </div>
-              <h3>Atmospheric teaser</h3>
+            <article class="math-card reveal">
+              <p class="feature-index">03</p>
+              <h3>Split into deeper pages only when needed.</h3>
+              <p>
+                If an app eventually needs references, diagrams, or long-form
+                writing, that can become a deeper linked page later.
+              </p>
             </article>
           </div>
         </section>
 
-        <section class="section about-section" id="about">
+        <section class="section" id="about">
           <div class="about-panel reveal">
             <div class="about-copy">
               <p class="eyebrow">About</p>
-              <h2>Your real About text belongs here.</h2>
+              <h2>ϕ &amp; Form explores the space between mathematics and visual art.</h2>
               <p>
-                Replace this placeholder with the phiandform story. The current layout
-                is tuned for a compact, high-confidence narrative rather than a long wall
-                of text, which keeps the page modern and easier to scan.
+                ϕ &amp; Form is a design studio built from a simple idea:
+                mathematics is not only logical, it is beautiful.
+              </p>
+              <p>
+                At the intersection of geometry, proportion, and interaction, the
+                studio designs digital experiences that reveal the elegance of
+                structure and turn mathematical principles into intuitive visual play.
+              </p>
+              <p>
+                Through carefully crafted apps and interactive tools, ϕ
+                &amp; Form invites people to experience mathematics as movement,
+                pattern, and design.
               </p>
             </div>
             <aside class="about-note">
-              <p class="mini-label">Suggested structure</p>
+              <p class="mini-label">Growth model</p>
               <ul>
-                <li>One sharp brand statement</li>
-                <li>One paragraph on what the app does</li>
-                <li>One paragraph on why it feels different</li>
+                <li>Homepage for the studio and featured apps</li>
+                <li>One detail page per app</li>
+                <li>Optional deeper mathematics pages later</li>
               </ul>
             </aside>
           </div>
         </section>
       </main>
 
-      <footer class="site-footer section" id="contact">
+      <footer class="site-footer section">
         <div>
-          <p class="eyebrow">Next step</p>
-          <h2>Once you drop in the real assets, this becomes a launch-ready shell.</h2>
+          <p class="eyebrow">Catalogue</p>
+          <h2>When a new app is ready, add one card here and one new page in `/apps`.</h2>
         </div>
         <a class="button button-primary" href="mailto:hello@phiandform.com">hello@phiandform.com</a>
       </footer>
@@ -252,4 +277,4 @@
 
     <script src="./script.js"></script>
   </body>
-  </html>
+</html>
