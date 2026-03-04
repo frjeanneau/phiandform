@@ -282,14 +282,6 @@ video {
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
 }
 
-.card-actions .button-secondary::after {
-  content: "\2197";
-  margin-left: 8px;
-  color: var(--accent);
-  font-size: 0.95rem;
-  line-height: 1;
-}
-
 .hero-actions {
   margin: 28px 0 36px;
 }
@@ -589,8 +581,8 @@ video {
 .app-card {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 18px;
-  padding: 22px;
+  gap: 16px;
+  padding: 20px;
   border-radius: var(--radius-xl);
   align-items: start;
 }
@@ -604,12 +596,12 @@ video {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 12px;
+  gap: 10px;
   align-self: start;
   justify-self: stretch;
   min-width: 0;
   max-width: none;
-  padding: 22px;
+  padding: 18px 18px 16px;
   border-radius: var(--radius-lg);
   background:
     radial-gradient(circle at top right, rgba(255, 255, 255, 0.14), transparent 34%),
@@ -619,7 +611,7 @@ video {
 .tag-list {
   display: grid;
   gap: 6px;
-  margin: 0;
+  margin: 4px 0 0;
 }
 
 .tag-list li {
@@ -640,7 +632,7 @@ video {
 }
 
 .media-slot-tall {
-  min-height: 220px;
+  min-height: 200px;
 }
 
 .media-slot img {
@@ -664,7 +656,7 @@ video {
 }
 
 .diagram-panel {
-  min-height: 220px;
+  min-height: 200px;
   padding: 20px;
   display: flex;
   align-items: end;
@@ -704,7 +696,7 @@ video {
 .app-card .diagram-panel {
   width: 100%;
   min-height: 0;
-  max-width: 320px;
+  max-width: 280px;
   margin: 0 auto;
   justify-self: center;
   aspect-ratio: 1 / 1;
@@ -729,8 +721,12 @@ video {
 }
 
 .card-download {
+  margin-top: 10px;
+}
+
+.card-download {
   margin-top: 0;
-  align-self: center;
+  align-self: flex-start;
 }
 
 .card-actions .app-store-badge {
