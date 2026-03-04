@@ -17,7 +17,7 @@
     <link rel="icon" type="image/x-icon" href="./favicon.ico?v=4" />
     <link rel="icon" type="image/png" href="./assets/favicon.png?v=4" />
     <link rel="shortcut icon" href="./favicon.ico?v=4" />
-    <link rel="stylesheet" href="./styles.css?v=20260303" />
+    <link rel="stylesheet" href="./styles.css?v=20260308" />
   </head>
   <body>
     <div id="page-top"></div>
@@ -34,7 +34,6 @@
           <a href="#apps">Apps</a>
           <a href="#mathematics">Mathematics</a>
         </nav>
-        <a class="button button-secondary" href="mailto:hello@phiandform.com">Get in touch</a>
       </header>
 
       <main>
@@ -178,10 +177,8 @@
           <div class="hero-stage reveal">
             <div class="orb orb-large"></div>
             <div class="orb orb-small"></div>
+            <p class="eyebrow hero-stage-label">Featured app</p>
             <div class="stage-card">
-              <div class="stage-topline">
-                <span>Featured app</span>
-              </div>
               <div class="stage-grid">
                 <div class="stage-media">
                   <video
@@ -274,11 +271,10 @@
 
         <section class="section" id="apps">
           <div class="section-heading reveal">
-            <p class="eyebrow">Featured Apps</p>
-            <h2>Two apps to begin, with room for a growing collection.</h2>
+            <p class="eyebrow">Apps</p>
           </div>
           <div class="app-grid">
-            <article class="app-card app-card-feature reveal">
+            <article class="app-card reveal">
               <div class="app-media">
                 <div class="media-slot media-slot-tall">
                   <img src="assets/screenshot-01.png" alt="Penrose Tiles screenshot" />
@@ -299,8 +295,17 @@
                 </ul>
                 <div class="card-actions">
                   <a class="button button-primary" href="./apps/penrose-art.html">Learn more</a>
-                  <a class="text-link" href="./apps/penrose-art.html#mathematics">View the mathematics</a>
+                  <a class="button button-secondary" href="./apps/penrose-art.html#mathematics">View the math</a>
                 </div>
+                <a
+                  class="app-store-badge card-download"
+                  href="#"
+                  aria-disabled="true"
+                  tabindex="-1"
+                >
+                  <img src="assets/app-store-badge.svg" alt="Download on the App Store" />
+                  <span class="app-store-badge-fallback">Download on the App Store</span>
+                </a>
               </div>
             </article>
 
@@ -333,8 +338,17 @@
                 </ul>
                 <div class="card-actions">
                   <a class="button button-primary" href="./apps/rhombi-tiles.html">Learn more</a>
-                  <a class="text-link" href="./apps/rhombi-tiles.html#mathematics">View the mathematics</a>
+                  <a class="button button-secondary" href="./apps/rhombi-tiles.html#mathematics">View the math</a>
                 </div>
+                <a
+                  class="app-store-badge card-download"
+                  href="#"
+                  aria-disabled="true"
+                  tabindex="-1"
+                >
+                  <img src="assets/app-store-badge.svg" alt="Download on the App Store" />
+                  <span class="app-store-badge-fallback">Download on the App Store</span>
+                </a>
               </div>
             </article>
           </div>
@@ -375,15 +389,72 @@
 
       </main>
 
-      <footer class="site-footer section">
-        <div>
-          <p class="eyebrow">Catalogue</p>
-          <h2>When a new app is ready, add one card here and one new page in `/apps`.</h2>
+      <footer class="site-footer">
+        <p class="footer-copy">Copyright 2026 Phi &amp; Form LLC. All rights reserved.</p>
+        <div class="footer-socials" aria-label="Social platforms">
+          <a
+            class="footer-social-link"
+            href="mailto:hello@phiandform.com"
+            aria-label="Email"
+          >
+            <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <path
+                d="M4 6.5h16a1.5 1.5 0 0 1 1.5 1.5v8A1.5 1.5 0 0 1 20 17.5H4A1.5 1.5 0 0 1 2.5 16V8A1.5 1.5 0 0 1 4 6.5Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linejoin="round"
+              />
+              <path
+                d="m4 8 8 5 8-5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+          <a
+            class="footer-social-link"
+            href="https://www.instagram.com/phiandform/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Instagram"
+          >
+            <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8" />
+              <circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" stroke-width="1.8" />
+              <circle cx="17.4" cy="6.8" r="1.2" fill="currentColor" />
+            </svg>
+          </a>
+          <a
+            class="footer-social-link"
+            href="https://x.com/phiandform"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="X"
+          >
+            <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <path d="M5 4h3.8l4.2 5.7L17.8 4H19l-5.4 6.7L20 20h-3.8l-4.5-6.1L6.2 20H5l6-7.4Z" fill="currentColor" />
+            </svg>
+          </a>
+          <span class="footer-social-link" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <path
+                d="M21.4 7.8a2.83 2.83 0 0 0-2-2C17.6 5.3 12 5.3 12 5.3s-5.6 0-7.4.5a2.83 2.83 0 0 0-2 2A29.6 29.6 0 0 0 2.1 12a29.6 29.6 0 0 0 .5 4.2 2.83 2.83 0 0 0 2 2c1.8.5 7.4.5 7.4.5s5.6 0 7.4-.5a2.83 2.83 0 0 0 2-2 29.6 29.6 0 0 0 .5-4.2 29.6 29.6 0 0 0-.5-4.2Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linejoin="round"
+              />
+              <path d="M10.2 8.9 15.4 12l-5.2 3.1Z" fill="currentColor" />
+            </svg>
+          </span>
         </div>
-        <a class="button button-primary" href="mailto:hello@phiandform.com">hello@phiandform.com</a>
       </footer>
     </div>
 
-    <script src="./script.js?v=20260303"></script>
+    <script src="./script.js?v=20260304"></script>
   </body>
 </html>

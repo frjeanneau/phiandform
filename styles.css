@@ -271,6 +271,24 @@ video {
   gap: 14px;
 }
 
+.card-actions {
+  align-items: center;
+}
+
+.card-actions .button-secondary {
+  border-color: rgba(244, 215, 31, 0.28);
+  background: linear-gradient(180deg, rgba(244, 215, 31, 0.12), rgba(255, 255, 255, 0.03));
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.card-actions .button-secondary::after {
+  content: "\2197";
+  margin-left: 8px;
+  color: var(--accent);
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
 .hero-actions {
   margin: 28px 0 36px;
 }
@@ -343,7 +361,11 @@ video {
 .hero-stage {
   position: relative;
   min-height: 0;
-  padding: 32px 0 0 8%;
+  padding: 32px 0 0;
+}
+
+.hero-stage-label {
+  margin: 0 0 14px;
 }
 
 .orb {
@@ -370,7 +392,7 @@ video {
 
 .stage-card {
   position: relative;
-  padding: 28px 30px 36px 26px;
+  padding: 28px;
   border-radius: var(--radius-xl);
   overflow: hidden;
 }
@@ -439,7 +461,7 @@ video {
   justify-self: end;
   min-width: 0;
   max-width: 308px;
-  margin: 6px 10px 12px 0;
+  margin: 0;
   background:
     radial-gradient(circle at top right, rgba(255, 255, 255, 0.14), transparent 34%),
     linear-gradient(180deg, rgba(244, 215, 31, 0.18), rgba(255, 255, 255, 0.03));
@@ -563,14 +585,11 @@ video {
 
 .app-card {
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1fr);
-  gap: 20px;
+  grid-template-columns: 1fr;
+  gap: 18px;
   padding: 24px;
   border-radius: var(--radius-xl);
-}
-
-.app-card-feature {
-  grid-column: span 2;
+  align-items: start;
 }
 
 .app-media,
@@ -581,11 +600,13 @@ video {
 .app-copy {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  gap: 12px;
 }
 
 .tag-list {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   margin: 20px 0 24px;
 }
@@ -598,6 +619,7 @@ video {
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.03);
   text-align: center;
+  white-space: nowrap;
 }
 
 .media-slot {
@@ -607,7 +629,7 @@ video {
 }
 
 .media-slot-tall {
-  min-height: 520px;
+  min-height: 240px;
 }
 
 .media-slot img {
@@ -631,7 +653,7 @@ video {
 }
 
 .diagram-panel {
-  min-height: 100%;
+  min-height: 240px;
   padding: 24px;
   display: flex;
   align-items: end;
@@ -661,6 +683,27 @@ video {
   position: relative;
   z-index: 1;
   max-width: 22rem;
+}
+
+.app-card .app-media {
+  width: 100%;
+}
+
+.app-card .media-slot,
+.app-card .diagram-panel {
+  width: 100%;
+  min-height: 240px;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.app-card .button {
+  min-width: 140px;
+}
+
+.card-download {
+  margin-top: 4px;
+  align-self: flex-start;
 }
 
 .math-card,
@@ -715,9 +758,40 @@ video {
 
 .site-footer {
   display: flex;
-  align-items: end;
+  align-items: center;
   justify-content: space-between;
   gap: 24px;
+  margin: 40px 0 0;
+  padding: 22px 0 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-copy {
+  margin: 0;
+  font-size: 0.94rem;
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.footer-social-link svg {
+  width: 19px;
+  height: 19px;
 }
 
 .app-shell {
@@ -848,47 +922,56 @@ video {
 
   .site-header {
     position: static;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-    border-radius: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 24px;
     gap: 12px;
-    margin: 8px 0 16px;
-    padding: 12px;
+    margin: 8px 0 20px;
+    padding: 12px 14px;
   }
 
   .brand {
-    width: auto;
-    justify-content: flex-start;
+    width: 100%;
+    justify-content: center;
     min-width: 0;
   }
 
   .brand-logo {
-    width: min(170px, 100%);
+    width: min(200px, 100%);
   }
 
   .site-nav {
-    grid-column: 1 / -1;
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 8px;
-    font-size: 0.88rem;
-  }
-
-  .site-nav a {
-    padding: 10px 8px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    padding: 4px;
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.03);
+    font-size: 0.82rem;
+  }
+
+  .site-nav a {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 8px 6px;
+    text-align: center;
+    border-radius: 999px;
+    white-space: nowrap;
   }
 
   .site-header > .button {
-    min-height: 38px;
-    padding: 0 14px;
-    font-size: 0.92rem;
-    white-space: nowrap;
+    display: none;
+  }
+
+  .site-footer {
+    justify-items: center;
+    text-align: center;
+    gap: 14px;
+    margin-top: 32px;
   }
 
   .hero-copy h1,
@@ -899,6 +982,11 @@ video {
 
   .hero-stage {
     padding-top: 16px;
+  }
+
+  .hero-stage-label {
+    margin-bottom: 12px;
+    padding-left: 2px;
   }
 
   .app-card,
