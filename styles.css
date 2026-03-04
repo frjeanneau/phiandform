@@ -184,6 +184,10 @@ video {
   background: rgba(244, 215, 31, 0.07);
 }
 
+.subnav-label-short {
+  display: none;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -1123,6 +1127,14 @@ video {
     flex: 0 0 auto;
     font-size: 0.84rem;
     padding: 10px 14px;
+  }
+
+  .subnav-label-full {
+    display: none;
+  }
+
+  .subnav-label-short {
+    display: inline;
   }
 
   .site-footer {
