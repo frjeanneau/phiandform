@@ -17,7 +17,7 @@
     <link rel="icon" type="image/x-icon" href="./favicon.ico?v=4" />
     <link rel="icon" type="image/png" href="./assets/favicon.png?v=4" />
     <link rel="shortcut icon" href="./favicon.ico?v=4" />
-    <link rel="stylesheet" href="./styles.css?v=20260315" />
+    <link rel="stylesheet" href="./styles.css?v=20260320" />
   </head>
   <body>
     <div class="page-shell app-shell">
@@ -29,13 +29,18 @@
           </span>
           <span class="brand-fallback">Phi &amp; Form</span>
         </a>
-        <nav class="site-nav" aria-label="Page navigation">
-          <a href="#overview">Overview</a>
-          <a href="#compare">Compare</a>
-          <a href="#connections">Connections</a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="./index.html">Overview</a>
+          <a href="./apps.html">Apps</a>
+          <a href="./mathematics.html">Mathematics</a>
         </nav>
-        <a class="button button-secondary" href="./index.html#apps">All apps</a>
       </header>
+
+      <nav class="page-subnav" aria-label="Mathematics sections">
+        <a href="#overview">Overview</a>
+        <a href="#compare">Compare</a>
+        <a href="#connections">Connections</a>
+      </nav>
 
       <main>
         <section class="section app-hero">
@@ -50,7 +55,7 @@
             </p>
             <div class="hero-actions">
               <a class="button button-primary" href="#compare">Compare the systems</a>
-              <a class="button button-ghost" href="./index.html#apps">Go to the apps</a>
+              <a class="button button-ghost" href="./apps.html">Go to the apps</a>
             </div>
           </div>
 
@@ -183,7 +188,11 @@
       </main>
 
       <footer class="site-footer">
-        <p class="footer-copy">Copyright 2026 Phi &amp; Form LLC. All rights reserved.</p>
+        <p class="footer-copy">
+          Copyright 2026 Phi &amp; Form LLC. All rights reserved.
+          <span class="footer-sep">•</span>
+          <a class="footer-link" href="./privacy.html">Privacy</a>
+        </p>
         <div class="footer-socials" aria-label="Social platforms">
           <a
             class="footer-social-link"
