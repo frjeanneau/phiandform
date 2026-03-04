@@ -762,6 +762,17 @@ video {
   min-height: 420px;
 }
 
+.page-penrose .app-hero .gallery-panel.media-slot.media-slot-tall {
+  min-height: 360px;
+  max-width: 360px;
+  justify-self: start;
+}
+
+.page-penrose #media .gallery-panel.media-slot {
+  min-height: 320px;
+  max-width: 360px;
+}
+
 .bullet-list {
   margin: 18px 0 0;
   padding-left: 18px;
@@ -837,29 +848,47 @@ video {
 
   .site-header {
     position: static;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
     border-radius: 28px;
-    gap: 10px;
+    gap: 12px;
     margin: 8px 0 16px;
-    padding: 6px 10px 6px 8px;
+    padding: 12px;
   }
 
   .brand {
-    width: 100%;
-    justify-content: center;
+    width: auto;
+    justify-content: flex-start;
+    min-width: 0;
   }
 
   .brand-logo {
-    width: min(180px, 100%);
+    width: min(170px, 100%);
   }
 
   .site-nav {
+    grid-column: 1 / -1;
     width: 100%;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    font-size: 0.9rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    font-size: 0.88rem;
+  }
+
+  .site-nav a {
+    padding: 10px 8px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .site-header > .button {
+    min-height: 38px;
+    padding: 0 14px;
+    font-size: 0.92rem;
+    white-space: nowrap;
   }
 
   .hero-copy h1,

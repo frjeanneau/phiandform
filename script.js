@@ -1,5 +1,15 @@
 const revealItems = document.querySelectorAll(".reveal");
 
+document.querySelectorAll('a[href="#page-top"]').forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+});
+
 if ("IntersectionObserver" in window) {
   const revealObserver = new IntersectionObserver(
     (entries) => {
@@ -85,6 +95,10 @@ document.querySelectorAll("video").forEach((video) => {
   const frame = video.closest(".video-frame, .stage-media, .gallery-panel");
   const fallback = frame?.querySelector(".video-fallback");
 
+  const enableManualPlayback = () => {
+    video.controls = true;
+  };
+
   const hideFallback = () => {
     if (fallback) {
       fallback.hidden = true;
@@ -104,4 +118,22 @@ document.querySelectorAll("video").forEach((video) => {
       fallback.hidden = false;
     }
   });
+
+  if (video.autoplay) {
+    const attemptPlayback = () => {
+      const playback = video.play();
+
+      if (playback && typeof playback.catch === "function") {
+        playback.catch(() => {
+          enableManualPlayback();
+        });
+      }
+    };
+
+    if (video.readyState >= 2) {
+      attemptPlayback();
+    } else {
+      video.addEventListener("loadeddata", attemptPlayback, { once: true });
+    }
+  }
 });
