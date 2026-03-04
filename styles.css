@@ -607,6 +607,7 @@ video {
 
 .app-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
 }
 
 .app-card {
@@ -616,6 +617,7 @@ video {
   padding: 20px;
   border-radius: var(--radius-xl);
   align-items: start;
+  align-content: start;
 }
 
 .app-media,
