@@ -1056,14 +1056,16 @@ video {
   }
 
   .site-header {
-    position: static;
+    position: sticky;
+    top: calc(env(safe-area-inset-top, 0px) + 8px);
+    z-index: 24;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     border-radius: 24px;
-    gap: 12px;
-    margin: 8px 0 20px;
-    padding: 12px 14px;
+    gap: 10px;
+    margin: 8px 0 8px;
+    padding: 10px 12px;
   }
 
   .brand {
@@ -1103,18 +1105,24 @@ video {
   }
 
   .page-subnav {
-    position: static;
+    position: sticky;
+    top: calc(env(safe-area-inset-top, 0px) + 110px);
+    z-index: 23;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-bottom: 8px;
-    padding: 0;
+    margin-bottom: 10px;
+    padding: 6px 8px;
+    background: rgba(6, 7, 10, 0.985);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+    box-shadow: var(--shadow);
   }
 
   .page-subnav a {
     flex: 0 0 auto;
     font-size: 0.84rem;
-    padding: 8px 12px;
+    padding: 10px 14px;
   }
 
   .site-footer {
