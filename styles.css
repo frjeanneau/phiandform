@@ -273,6 +273,7 @@ video {
 
 .card-actions {
   align-items: center;
+  row-gap: 12px;
 }
 
 .card-actions .button-secondary {
@@ -504,8 +505,10 @@ video {
 }
 
 .stage-button {
-  width: fit-content;
-  min-width: 160px;
+  width: 120px;
+  min-width: 120px;
+  font-size: 0.9rem;
+  white-space: nowrap;
 }
 
 .app-store-badge {
@@ -580,14 +583,14 @@ video {
 }
 
 .app-grid {
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .app-card {
   display: grid;
-  grid-template-columns: minmax(300px, 0.95fr) minmax(260px, 0.68fr);
-  gap: 22px;
-  padding: 28px;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  padding: 22px;
   border-radius: var(--radius-xl);
   align-items: start;
 }
@@ -601,12 +604,12 @@ video {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 14px;
+  gap: 12px;
   align-self: start;
-  justify-self: end;
+  justify-self: stretch;
   min-width: 0;
-  max-width: 340px;
-  padding: 24px;
+  max-width: none;
+  padding: 22px;
   border-radius: var(--radius-lg);
   background:
     radial-gradient(circle at top right, rgba(255, 255, 255, 0.14), transparent 34%),
@@ -701,18 +704,19 @@ video {
 .app-card .diagram-panel {
   width: 100%;
   min-height: 0;
-  max-width: 420px;
-  margin: 0;
-  justify-self: start;
-  aspect-ratio: 9 / 16;
+  max-width: 320px;
+  margin: 0 auto;
+  justify-self: center;
+  aspect-ratio: 1 / 1;
+  background: #050505;
 }
 
 .app-card .button {
-  min-width: 140px;
+  min-width: 132px;
 }
 
 .app-card .app-copy h3 {
-  font-size: clamp(1.55rem, 2vw, 2.1rem);
+  font-size: clamp(1.45rem, 1.7vw, 1.9rem);
   line-height: 0.98;
 }
 
@@ -721,12 +725,20 @@ video {
 }
 
 .app-card .card-actions {
-  margin-top: 4px;
+  margin-top: 2px;
 }
 
 .card-download {
   margin-top: 0;
-  align-self: flex-start;
+  align-self: center;
+}
+
+.card-actions .app-store-badge {
+  min-height: 42px;
+}
+
+.card-actions .app-store-badge.has-badge img {
+  height: 42px;
 }
 
 .math-card,
