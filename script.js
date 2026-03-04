@@ -64,6 +64,23 @@ document.querySelectorAll(".brand-logo img").forEach((image) => {
   });
 });
 
+document.querySelectorAll(".app-store-badge img").forEach((image) => {
+  const badge = image.closest(".app-store-badge");
+
+  const showBadge = () => {
+    badge?.classList.add("has-badge");
+  };
+
+  if (image.complete && image.naturalWidth > 0) {
+    showBadge();
+  }
+
+  image.addEventListener("load", showBadge, { once: true });
+  image.addEventListener("error", () => {
+    badge?.classList.remove("has-badge");
+  });
+});
+
 document.querySelectorAll("video").forEach((video) => {
   const frame = video.closest(".video-frame, .stage-media, .gallery-panel");
   const fallback = frame?.querySelector(".video-fallback");

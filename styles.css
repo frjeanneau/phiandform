@@ -133,12 +133,6 @@ video {
   letter-spacing: 0.04em;
 }
 
-.phi-char {
-  font-family: "STIX Two Text", "Times New Roman", serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
 .brand.has-logo .brand-fallback {
   display: none;
 }
@@ -177,6 +171,13 @@ video {
 .button:hover,
 .button:focus-visible {
   transform: translateY(-1px);
+}
+
+.button:disabled,
+.button[aria-disabled="true"] {
+  cursor: default;
+  transform: none;
+  opacity: 0.72;
 }
 
 .button-primary {
@@ -301,6 +302,9 @@ video {
 }
 
 .hero-metrics li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 18px;
   border-radius: var(--radius-md);
 }
@@ -316,7 +320,22 @@ video {
   margin-bottom: 10px;
 }
 
+.metric-icon {
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.metric-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
 .metric-label {
+  display: block;
   color: var(--muted);
   line-height: 1.5;
 }
@@ -351,7 +370,7 @@ video {
 
 .stage-card {
   position: relative;
-  padding: 24px;
+  padding: 28px 30px 36px 26px;
   border-radius: var(--radius-xl);
   overflow: hidden;
 }
@@ -368,8 +387,8 @@ video {
 
 .stage-grid {
   display: grid;
-  grid-template-columns: minmax(280px, 0.86fr) minmax(260px, 0.64fr);
-  gap: 18px;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(240px, 0.56fr);
+  gap: 22px;
   align-items: start;
 }
 
@@ -417,7 +436,10 @@ video {
   justify-content: flex-start;
   gap: 14px;
   align-self: start;
+  justify-self: end;
   min-width: 0;
+  max-width: 308px;
+  margin: 6px 10px 12px 0;
   background:
     radial-gradient(circle at top right, rgba(255, 255, 255, 0.14), transparent 34%),
     linear-gradient(180deg, rgba(244, 215, 31, 0.18), rgba(255, 255, 255, 0.03));
@@ -437,15 +459,73 @@ video {
 }
 
 .stage-support {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
   color: var(--muted);
-  font-size: 0.84rem;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+.stage-support li {
+  margin: 0;
+}
+
+.stage-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
 }
 
 .stage-button {
   width: fit-content;
   min-width: 160px;
+}
+
+.app-store-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  border: 1px solid var(--panel-border);
+  background: rgba(255, 255, 255, 0.03);
+  text-decoration: none;
+}
+
+.app-store-badge[aria-disabled="true"] {
+  pointer-events: none;
+}
+
+.app-store-badge img {
+  display: none;
+  height: 40px;
+  width: auto;
+}
+
+.app-store-badge.has-badge {
+  padding: 0;
+  min-height: auto;
+  border: 0;
+  background: transparent;
+}
+
+.app-store-badge.has-badge img {
+  display: block;
+}
+
+.app-store-badge.has-badge .app-store-badge-fallback {
+  display: none;
+}
+
+.app-store-badge-fallback {
+  color: var(--text);
+  font-weight: 700;
 }
 
 .section-heading {
@@ -586,6 +666,30 @@ video {
 .math-card,
 .story-card {
   min-height: 100%;
+}
+
+.story-card-hero {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 16px;
+  align-items: start;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+}
+
+.story-card-hero h3 {
+  max-width: 16ch;
+  font-size: clamp(2.2rem, 5vw, 4.4rem);
+  line-height: 0.96;
+}
+
+.story-card-hero p:last-child {
+  max-width: 56rem;
+  font-size: 1.04rem;
+  line-height: 1.7;
 }
 
 .about-panel {

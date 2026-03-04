@@ -9,5 +9,6 @@ Drop the real marketing assets in this folder and keep these filenames if you wa
 - `movie-01.mp4` or `movie-01.mov`
 - `movie-02.mp4` or `movie-02.mov`
 - `movie-03.mp4` or `movie-03.mov`
+- `app-store-badge.svg`
 
 You can also rename files and update the references in `/index.html`.
