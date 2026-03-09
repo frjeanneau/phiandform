@@ -80,7 +80,7 @@ video {
 }
 
 .page-subnav + main .section {
-  scroll-margin-top: 96px;
+  scroll-margin-top: 112px;
 }
 
 .page-subnav + main #studio.section,
@@ -1069,7 +1069,7 @@ video {
   }
 
   .page-subnav + main .section {
-    scroll-margin-top: 132px;
+    scroll-margin-top: 148px;
   }
 
   .page-shell {
