@@ -76,7 +76,16 @@ video {
 
 .section {
   padding: 48px 0;
-  scroll-margin-top: 172px;
+  scroll-margin-top: 130px;
+}
+
+.page-subnav + main .section {
+  scroll-margin-top: 96px;
+}
+
+.page-subnav + main #studio.section,
+.page-subnav + main #apps.section {
+  padding-top: 12px;
 }
 
 .site-header {
@@ -1055,6 +1064,14 @@ video {
 }
 
 @media (max-width: 760px) {
+  .section {
+    scroll-margin-top: 176px;
+  }
+
+  .page-subnav + main .section {
+    scroll-margin-top: 132px;
+  }
+
   .page-shell {
     padding: 16px 16px 40px;
   }
