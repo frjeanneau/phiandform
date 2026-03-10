@@ -1057,19 +1057,31 @@ video {
 
 .page-penrose #gallery .gallery-panel.media-slot {
   min-height: 196px;
-  max-width: 240px;
-  justify-self: center;
 }
 
-.page-penrose #gallery .gallery-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+.page-penrose #gallery .gallery-rail {
+  display: flex;
   gap: 14px;
+  overflow-x: auto;
+  padding: 2px 2px 10px;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
 }
 
-.page-penrose #gallery .gallery-panel {
+.page-penrose #gallery .gallery-rail::-webkit-scrollbar {
+  height: 8px;
+}
+
+.page-penrose #gallery .gallery-rail::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+}
+
+.page-penrose #gallery .gallery-rail .gallery-panel {
+  flex: 0 0 240px;
   min-height: 196px;
   max-width: 240px;
-  justify-self: center;
+  scroll-snap-align: start;
 }
 
 .page-penrose #gallery .gallery-panel video,
@@ -1178,8 +1190,10 @@ video {
     min-height: auto;
   }
 
-  .page-penrose #gallery .gallery-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .page-penrose #gallery .gallery-rail .gallery-panel {
+    flex-basis: 220px;
+    min-height: 184px;
+    max-width: 220px;
   }
 
   .app-hero-simple {
@@ -1301,15 +1315,16 @@ video {
     padding: 10px 14px;
   }
 
-  .page-penrose #gallery .gallery-grid {
-    grid-template-columns: 1fr;
+  .page-penrose #gallery .gallery-rail {
     gap: 12px;
+    padding-bottom: 8px;
   }
 
-  .page-penrose #gallery .gallery-panel,
-  .page-penrose #gallery .gallery-panel.media-slot {
-    max-width: 100%;
-    min-height: 184px;
+  .page-penrose #gallery .gallery-rail .gallery-panel,
+  .page-penrose #gallery .gallery-rail .gallery-panel.media-slot {
+    flex-basis: min(78vw, 280px);
+    max-width: min(78vw, 280px);
+    min-height: 172px;
   }
 
   .subnav-label-full {
