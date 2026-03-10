@@ -38,126 +38,50 @@
 
       <nav class="page-subnav" aria-label="Apps sections">
         <a href="#overview">Overview</a>
-        <a href="#penrose-app">Penrose Tiles</a>
-        <a href="#rhombi-app">Rhombi Tiles</a>
+        <a href="./apps/penrose-art.html">Penrose Tiles</a>
+        <a href="./apps/rhombi-tiles.html">Rhombi Tiles</a>
       </nav>
 
       <main>
-        <section class="section app-hero" id="overview">
+        <section class="section app-hero app-hero-simple" id="overview">
           <div class="app-hero-copy reveal">
-            <p class="eyebrow">Apps</p>
             <h1>A growing collection of geometric tools.</h1>
             <p class="app-summary">
               Phi &amp; Form builds apps that turn mathematical structure into
               something you can compose with directly. Each one explores a
               different kind of order through tiling, symmetry, and visual play.
             </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="./apps/penrose-art.html">Open Penrose Tiles</a>
-              <a class="button button-ghost" href="./apps/rhombi-tiles.html">Open Rhombi Tiles</a>
+          </div>
+
+          <div class="app-choice reveal" id="choose-apps">
+            <div class="section-heading">
+              <p class="eyebrow">Choose an app</p>
             </div>
-          </div>
+            <div class="app-choice-grid">
+              <article class="app-choice-card">
+                <a class="app-choice-media media-slot" href="./apps/penrose-art.html">
+                  <img src="assets/penrose-choice-01.png" alt="Penrose Tiles screenshot" />
+                  <div class="media-placeholder">Add `assets/penrose-choice-01.png`</div>
+                </a>
+                <div class="app-choice-copy">
+                  <h2>Penrose Tiles</h2>
+                  <p>2 tile types. Non-repeating order.</p>
+                  <a class="text-link" href="./apps/penrose-art.html">More information</a>
+                </div>
+              </article>
 
-          <div class="hero-stage reveal">
-            <div class="orb orb-large"></div>
-            <div class="orb orb-small"></div>
-            <div class="stage-card">
-              <div class="stage-topline">
-                <span>App collection</span>
-                <span>Phi &amp; Form</span>
-              </div>
-              <div class="stage-grid">
-                <div class="gallery-panel media-slot media-slot-tall">
-                  <img src="assets/screenshot-02.png" alt="Rhombi Tiles composition" />
-                  <div class="media-placeholder">Add `assets/screenshot-02.png`</div>
+              <article class="app-choice-card">
+                <a class="app-choice-media media-slot" href="./apps/rhombi-tiles.html">
+                  <img src="assets/rhombi-choice-01.png" alt="Rhombi Tiles screenshot" />
+                  <div class="media-placeholder">Add `assets/rhombi-choice-01.png`</div>
+                </a>
+                <div class="app-choice-copy">
+                  <h2>Rhombi Tiles</h2>
+                  <p>3 tile types. Symmetry and variation.</p>
+                  <a class="text-link" href="./apps/rhombi-tiles.html">More information</a>
                 </div>
-                <div class="stage-copy">
-                  <p class="mini-label">What changes app to app</p>
-                  <h2>Each app frames a different mathematical world.</h2>
-                  <p>
-                    Penrose Tiles explores non-repeating order. Rhombi Tiles
-                    explores symmetry and variation through three tile types.
-                  </p>
-                </div>
-              </div>
+              </article>
             </div>
-          </div>
-        </section>
-
-        <section class="section" id="apps">
-          <div class="section-heading reveal">
-            <p class="eyebrow">Apps</p>
-          </div>
-          <div class="app-grid">
-            <article class="app-card reveal" id="penrose-app">
-              <div class="app-media">
-                <div class="media-slot media-slot-tall">
-                  <img src="assets/screenshot-01.png" alt="Penrose Tiles screenshot" />
-                  <div class="media-placeholder">Add `assets/screenshot-01.png`</div>
-                </div>
-              </div>
-              <div class="app-copy">
-                <h3>Penrose Tiles</h3>
-                <p>
-                  Create aperiodic compositions with Penrose tiles and explore
-                  the geometry behind them. Discover how two tile types create
-                  non-repeating order.
-                </p>
-                <ul class="tag-list">
-                  <li>Penrose tiling</li>
-                  <li>2 tile types</li>
-                  <li>Non-repeating order</li>
-                </ul>
-                <div class="card-actions">
-                  <a class="button button-primary" href="./apps/penrose-art.html">Learn more</a>
-                  <a class="button button-secondary" href="./apps/penrose-art.html#mathematics">View the math</a>
-                  <a
-                    class="app-store-badge card-download"
-                    href="#"
-                    aria-disabled="true"
-                    tabindex="-1"
-                  >
-                    <img src="assets/app-store-badge.svg" alt="Download on the App Store" />
-                    <span class="app-store-badge-fallback">Download on the App Store</span>
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <article class="app-card reveal" id="rhombi-app">
-              <div class="app-media">
-                <div class="media-slot media-slot-tall">
-                  <img src="assets/screenshot-02.png" alt="Rhombi Tiles screenshot" />
-                  <div class="media-placeholder">Add `assets/screenshot-02.png`</div>
-                </div>
-              </div>
-              <div class="app-copy">
-                <h3>Rhombi Tiles</h3>
-                <p>
-                  Build compositions from rhombus tilings and explore how
-                  simple tile combinations create symmetry and variation.
-                  Discover how three tile types generate symmetry across the composition.
-                </p>
-                <ul class="tag-list">
-                  <li>Rhombus tiling</li>
-                  <li>3 tile types</li>
-                  <li>Symmetry and variation</li>
-                </ul>
-                <div class="card-actions">
-                  <a class="button button-primary" href="./apps/rhombi-tiles.html">Learn more</a>
-                  <a class="button button-secondary" href="./apps/rhombi-tiles.html#mathematics">View the math</a>
-                  <a
-                    class="app-store-badge card-download"
-                    href="#"
-                    aria-disabled="true"
-                    tabindex="-1"
-                  >
-                    <img src="assets/app-store-badge.svg" alt="Download on the App Store" />
-                    <span class="app-store-badge-fallback">Download on the App Store</span>
-                  </a>
-                </div>
-              </div>
-            </article>
           </div>
         </section>
       </main>

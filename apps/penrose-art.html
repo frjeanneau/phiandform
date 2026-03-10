@@ -23,30 +23,28 @@
     <div class="page-shell app-shell">
       <div id="page-top"></div>
       <header class="site-header">
-        <a class="brand" href="../index.html" aria-label="Phi and Form home">
+        <a class="brand" href="../index.html#math-as-art" aria-label="Phi and Form home">
           <span class="brand-logo">
             <img src="../assets/logo.png?v=20260303" alt="Phi and Form logo" />
           </span>
           <span class="brand-fallback">Phi &amp; Form</span>
         </a>
         <nav class="site-nav" aria-label="Primary navigation">
-          <a href="../index.html">Overview</a>
+          <a href="../index.html#math-as-art">Overview</a>
           <a href="../apps.html">Apps</a>
           <a href="../mathematics.html">Mathematics</a>
         </nav>
       </header>
 
-      <nav class="page-subnav" aria-label="Penrose Tiles sections">
-        <a href="#overview">Overview</a>
-        <a href="#media">Media</a>
-        <a href="#mathematics">Mathematics</a>
-        <a href="#support">Support</a>
+      <nav class="page-subnav" aria-label="Apps pages">
+        <a href="../apps.html#overview">All apps</a>
+        <a href="./penrose-art.html" aria-current="page">Penrose Tiles</a>
+        <a href="./rhombi-tiles.html">Rhombi Tiles</a>
       </nav>
 
       <main>
-        <section class="section app-hero">
+        <section class="section app-hero" id="overview">
           <div class="app-hero-copy reveal">
-            <p class="eyebrow">App one</p>
             <h1>Penrose Tiles</h1>
             <p class="app-summary">
               Penrose Tiles is a Phi &amp; Form app for creating rich visual
@@ -55,8 +53,9 @@
               aesthetically rewarding.
             </p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#media">See the visuals</a>
-              <a class="button button-ghost" href="#mathematics">Read the mathematics</a>
+              <a class="button button-primary" href="#gallery">See the gallery</a>
+              <a class="button button-ghost" href="#features">Explore features</a>
+              <a class="button button-ghost" href="#support">Get support</a>
             </div>
           </div>
 
@@ -86,47 +85,86 @@
           </div>
         </section>
 
-        <section class="section" id="overview">
-          <div class="detail-grid">
-            <article class="detail-card reveal">
-              <p class="mini-label">Overview</p>
-              <h2>An art tool grounded in aperiodic tilings.</h2>
+        <section class="section" id="features">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Features</p>
+            <h2>Advanced tools that shape how Penrose compositions evolve.</h2>
+          </div>
+          <div class="penrose-feature-grid">
+            <article class="detail-card penrose-feature-card reveal">
+              <div class="feature-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path d="m12 3 6 4.2v9.6L12 21l-6-4.2V7.2Z" fill="none" stroke="currentColor" stroke-width="1.6" />
+                  <path d="m12 3 6 4.2-6 4.2-6-4.2Z" fill="none" stroke="currentColor" stroke-width="1.6" />
+                </svg>
+              </div>
+              <h3>Aperiodic Build Mode</h3>
               <p>
-                Penrose tilings cover the plane without repeating periodically.
-                That makes them mathematically distinctive and visually rich.
-                Penrose Tiles uses that structure as the basis for composition,
-                making abstract theory accessible through interaction.
-              </p>
-              <p>
-                The app page is the right place to explain that relationship:
-                what the user can make, what makes the system special, and how the
-                mathematics shapes the visual result.
+                Compose directly with two Penrose tile types while keeping the
+                non-repeating structure coherent as the design grows.
               </p>
             </article>
-            <article class="detail-card reveal">
-              <p class="mini-label">On this page</p>
-              <h3>Suggested app-page structure</h3>
-              <ul class="bullet-list">
-                <li>What the app does</li>
-                <li>Screenshots and short motion clips</li>
-                <li>How the interaction works</li>
-                <li>The mathematics behind the system</li>
-              </ul>
+
+            <article class="detail-card penrose-feature-card reveal">
+              <div class="feature-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <circle cx="12" cy="12" r="8.2" fill="none" stroke="currentColor" stroke-width="1.6" />
+                  <path d="m12 3.8 3.6 3.6L12 11 8.4 7.4Z" fill="none" stroke="currentColor" stroke-width="1.6" />
+                  <path d="m12 13 4.5 4.5M12 13l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                </svg>
+              </div>
+              <h3>Local-To-Global Variation</h3>
+              <p>
+                Small tile changes propagate through the pattern, making it easy
+                to test variations and discover strong visual outcomes.
+              </p>
+            </article>
+
+            <article class="detail-card penrose-feature-card reveal">
+              <div class="feature-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path d="M4.5 17.5h15" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M7.5 14.5h3v6h-3Zm6-4h3v10h-3Z" fill="none" stroke="currentColor" stroke-width="1.6" />
+                </svg>
+              </div>
+              <h3>Balance Controls</h3>
+              <p>
+                Refine contrast, density, and pattern rhythm to tune both the
+                mathematical clarity and final visual expression.
+              </p>
+            </article>
+
+            <article class="detail-card penrose-feature-card reveal">
+              <div class="feature-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path d="M6 16.5 10 12l3 2.4 5-6.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M6 6.5h12v11H6Z" fill="none" stroke="currentColor" stroke-width="1.6" />
+                </svg>
+              </div>
+              <h3>Pattern Study View</h3>
+              <p>
+                Move between artistic composition and structural reading so the
+                geometry stays understandable while you create.
+              </p>
             </article>
           </div>
         </section>
 
-        <section class="section" id="media">
+        <section class="section" id="gallery">
           <div class="section-heading reveal">
-            <p class="eyebrow">Media</p>
-            <h2>Use each app page for real screenshots and motion, not just placeholders.</h2>
+            <p class="eyebrow">Gallery</p>
+            <h2>Video and screenshots from live Penrose compositions.</h2>
           </div>
-          <div class="gallery-grid">
+          <div class="gallery-grid gallery-grid-compact">
             <div class="gallery-panel media-slot reveal">
               <img src="../assets/screenshot-01.png" alt="Penrose Tiles screenshot" />
               <div class="media-placeholder">Add `../assets/screenshot-01.png`</div>
             </div>
-            <div class="gallery-panel reveal">
+            <div class="gallery-panel media-slot reveal">
+              <img src="../assets/penrose-choice-01.png" alt="Penrose Tiles composition detail" />
+              <div class="media-placeholder">Add `../assets/penrose-choice-01.png`</div>
+            </div>
+            <div class="gallery-panel media-slot reveal">
               <video
                 autoplay
                 loop
@@ -136,45 +174,13 @@
                 preload="auto"
                 poster="../assets/screenshot-01.png"
               >
-                <source src="../assets/movie-01.MP4" type="video/mp4" />
+                <source src="../assets/movie-01.mp4" type="video/mp4" />
               </video>
-              <div class="video-fallback">Add `../assets/movie-01.MP4`</div>
+              <div class="video-fallback">Add `../assets/movie-01.mp4`</div>
             </div>
-          </div>
-        </section>
-
-        <section class="section" id="mathematics">
-          <div class="section-heading reveal">
-            <p class="eyebrow">Mathematics</p>
-            <h2>The mathematical story should be visible and readable on the app page.</h2>
-          </div>
-          <div class="detail-grid">
-            <article class="detail-card reveal">
-              <p class="mini-label">Core ideas</p>
-              <h3>Aperiodicity</h3>
-              <p>
-                Penrose tilings are famous because they fill the plane without
-                settling into an ordinary repeating grid. That tension between
-                order and non-repetition gives the artwork its character.
-              </p>
-              <p>
-                On the site, this section can explain why the patterns feel
-                coherent even when they never repeat in the familiar way.
-              </p>
-            </article>
-            <article class="detail-card reveal">
-              <p class="mini-label">Core ideas</p>
-              <h3>The golden ratio</h3>
-              <p>
-                Many Penrose constructions are linked to the golden ratio
-                through edge lengths, subdivision rules, and the larger
-                proportional structure of the tiling.
-              </p>
-              <p>
-                This is a strong opportunity for diagrams later if you want to
-                go deeper than prose.
-              </p>
-            </article>
+            <div class="gallery-panel media-slot reveal">
+              <div class="media-placeholder">Add `../assets/penrose-gallery-03.png`</div>
+            </div>
           </div>
         </section>
 
