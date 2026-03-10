@@ -1056,7 +1056,7 @@ video {
 }
 
 .page-penrose #gallery .gallery-panel.media-slot {
-  min-height: 196px;
+  min-height: 0;
 }
 
 .page-penrose #gallery .gallery-rail {
@@ -1078,9 +1078,11 @@ video {
 }
 
 .page-penrose #gallery .gallery-rail .gallery-panel {
-  flex: 0 0 240px;
-  min-height: 196px;
-  max-width: 240px;
+  flex: 0 0 280px;
+  width: 280px;
+  max-width: 280px;
+  aspect-ratio: 1170 / 2532;
+  min-height: 0;
   scroll-snap-align: start;
 }
 
@@ -1191,9 +1193,10 @@ video {
   }
 
   .page-penrose #gallery .gallery-rail .gallery-panel {
-    flex-basis: 220px;
-    min-height: 184px;
-    max-width: 220px;
+    flex-basis: 240px;
+    width: 240px;
+    max-width: 240px;
+    min-height: 0;
   }
 
   .app-hero-simple {
@@ -1322,9 +1325,10 @@ video {
 
   .page-penrose #gallery .gallery-rail .gallery-panel,
   .page-penrose #gallery .gallery-rail .gallery-panel.media-slot {
-    flex-basis: min(78vw, 280px);
-    max-width: min(78vw, 280px);
-    min-height: 172px;
+    flex-basis: min(72vw, 320px);
+    width: min(72vw, 320px);
+    max-width: min(72vw, 320px);
+    min-height: 0;
   }
 
   .subnav-label-full {
