@@ -1085,6 +1085,14 @@ video {
   align-items: start;
 }
 
+.page-rhombi .section {
+  padding: 32px 0;
+}
+
+.page-rhombi #gallery.section {
+  padding-top: 16px;
+}
+
 .page-penrose .app-hero .stage-card-single {
   padding: 0;
   display: flex;
