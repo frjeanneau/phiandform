@@ -1364,9 +1364,9 @@ video {
 
   .page-penrose #gallery .gallery-rail .gallery-panel,
   .page-penrose #gallery .gallery-rail .gallery-panel.media-slot {
-    flex-basis: min(68vw, 270px);
-    width: min(68vw, 270px);
-    max-width: min(68vw, 270px);
+    flex-basis: min(50vw, 200px);
+    width: min(50vw, 200px);
+    max-width: min(50vw, 200px);
     min-height: 0;
   }
 
