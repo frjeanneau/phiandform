@@ -1066,6 +1066,9 @@ video {
   min-height: 0;
   align-self: start;
   margin-top: -10px;
+  display: flex;
+  justify-content: center;
+  justify-self: stretch;
 }
 
 .page-penrose .app-hero .stage-card-single {
@@ -1078,21 +1081,25 @@ video {
 }
 
 .page-penrose .app-hero .penrose-hero-media {
-  width: clamp(180px, 17vw, 240px);
-  max-width: 240px;
+  width: clamp(210px, 18vw, 270px);
+  max-width: 270px;
   aspect-ratio: 1 / 1;
   min-height: 0;
+  padding: 8px;
+  background: #050505;
 }
 
 .page-penrose .app-hero .penrose-hero-media video,
 .page-penrose .app-hero .penrose-hero-media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center center;
+  border-radius: calc(var(--radius-lg) - 8px);
 }
 
 .page-penrose #gallery .gallery-panel.media-slot {
-  min-height: 0;
+  min-height: 0 !important;
 }
 
 .page-penrose #overview.section {
@@ -1108,8 +1115,10 @@ video {
 
 .page-penrose #gallery .gallery-rail {
   display: flex;
+  flex-wrap: nowrap;
   gap: 14px;
   overflow-x: auto;
+  overflow-y: hidden;
   padding: 2px 2px 10px;
   scroll-snap-type: x proximity;
   -webkit-overflow-scrolling: touch;
@@ -1124,12 +1133,13 @@ video {
   border-radius: 999px;
 }
 
-.page-penrose #gallery .gallery-rail .gallery-panel {
-  flex: 0 0 208px;
-  width: 208px;
-  max-width: 208px;
-  aspect-ratio: 1170 / 2532;
-  min-height: 0;
+.page-penrose #gallery .gallery-rail .gallery-panel,
+.page-penrose #gallery .gallery-rail .gallery-panel.media-slot {
+  flex: 0 0 164px !important;
+  width: 164px !important;
+  max-width: 164px !important;
+  aspect-ratio: 1170 / 2532 !important;
+  min-height: 0 !important;
   scroll-snap-align: start;
 }
 
@@ -1239,15 +1249,22 @@ video {
     min-height: auto;
   }
 
-  .page-penrose #gallery .gallery-rail .gallery-panel {
-    flex-basis: 220px;
-    width: 220px;
-    max-width: 220px;
-    min-height: 0;
+  .page-penrose #gallery .gallery-rail .gallery-panel,
+  .page-penrose #gallery .gallery-rail .gallery-panel.media-slot {
+    flex-basis: 152px !important;
+    width: 152px !important;
+    max-width: 152px !important;
+    min-height: 0 !important;
   }
 
   .page-penrose .app-hero .hero-stage {
     margin-top: 0;
+    justify-content: center;
+    justify-self: stretch;
+  }
+
+  .page-penrose .app-hero .stage-card-single {
+    justify-content: center;
   }
 
   .app-hero-simple {
@@ -1376,10 +1393,10 @@ video {
 
   .page-penrose #gallery .gallery-rail .gallery-panel,
   .page-penrose #gallery .gallery-rail .gallery-panel.media-slot {
-    flex-basis: min(44vw, 176px);
-    width: min(44vw, 176px);
-    max-width: min(44vw, 176px);
-    min-height: 0;
+    flex-basis: 146px !important;
+    width: 146px !important;
+    max-width: 146px !important;
+    min-height: 0 !important;
   }
 
   .subnav-label-full {
@@ -1388,6 +1405,10 @@ video {
 
   .subnav-label-short {
     display: inline;
+  }
+
+  .back-to-top {
+    display: none;
   }
 
   .site-footer {

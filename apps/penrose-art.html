@@ -17,7 +17,71 @@
     <link rel="icon" type="image/x-icon" href="../favicon.ico?v=4" />
     <link rel="icon" type="image/png" href="../assets/favicon.png?v=4" />
     <link rel="shortcut icon" href="../favicon.ico?v=4" />
-    <link rel="stylesheet" href="../styles.css?v=20260329" />
+    <link rel="stylesheet" href="../styles.css?v=20260403" />
+    <style>
+      /* Page-local guardrail: keep Penrose gallery as horizontal thumbnail rail */
+      .page-penrose #gallery .gallery-rail {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        gap: 18px !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+      }
+
+      .page-penrose #gallery .gallery-rail > .gallery-panel {
+        flex: 0 0 188px !important;
+        width: 188px !important;
+        max-width: 188px !important;
+        aspect-ratio: 1170 / 2532 !important;
+        min-height: 0 !important;
+        scroll-snap-align: start;
+      }
+
+      .page-penrose #gallery .section-heading,
+      .page-penrose #gallery .gallery-rail,
+      .page-penrose #features .section-heading,
+      .page-penrose #features .penrose-feature-grid,
+      .page-penrose #support .section-heading,
+      .page-penrose #support .detail-grid {
+        max-width: 940px;
+      }
+
+      .page-penrose #features .penrose-feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        justify-content: start;
+        gap: 20px;
+      }
+
+      @media (max-width: 1080px) {
+        .page-penrose #gallery .gallery-rail > .gallery-panel {
+          flex-basis: 164px !important;
+          width: 164px !important;
+          max-width: 164px !important;
+        }
+
+        .page-penrose #gallery .section-heading,
+        .page-penrose #gallery .gallery-rail,
+        .page-penrose #features .section-heading,
+        .page-penrose #features .penrose-feature-grid,
+        .page-penrose #support .section-heading,
+        .page-penrose #support .detail-grid {
+          max-width: none;
+        }
+
+        .page-penrose #features .penrose-feature-grid {
+          grid-template-columns: 1fr;
+          justify-content: stretch;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .page-penrose #gallery .gallery-rail > .gallery-panel {
+          flex-basis: 146px !important;
+          width: 146px !important;
+          max-width: 146px !important;
+        }
+      }
+    </style>
   </head>
   <body class="page-penrose">
     <div class="page-shell app-shell">
@@ -64,8 +128,18 @@
             <div class="orb orb-small"></div>
             <div class="stage-card stage-card-single">
               <div class="gallery-panel media-slot penrose-hero-media">
-                <img src="../assets/penrose-gallery-00.png" alt="Penrose Tiles hero preview" />
-                <div class="media-placeholder">Add `../assets/penrose-gallery-00.png`</div>
+                <video
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                  webkit-playsinline
+                  preload="auto"
+                  poster="../assets/penrose-gallery-00.png"
+                >
+                  <source src="../assets/penrose-gallery-00.mp4" type="video/mp4" />
+                </video>
+                <div class="video-fallback">Add `../assets/penrose-gallery-00.mp4`</div>
               </div>
             </div>
           </div>
@@ -74,16 +148,11 @@
         <section class="section" id="gallery">
           <div class="section-heading reveal">
             <p class="eyebrow">Gallery</p>
-            <a class="back-to-top" href="#page-top">Back to top ↑</a>
           </div>
           <div class="gallery-rail reveal" aria-label="Penrose media gallery">
             <div class="gallery-panel media-slot reveal">
               <img src="../assets/penrose-gallery-01.png" alt="Penrose Tiles screenshot" />
               <div class="media-placeholder">Add `../assets/penrose-gallery-01.png` (1170×2532)</div>
-            </div>
-            <div class="gallery-panel media-slot reveal">
-              <img src="../assets/penrose-gallery-02.png" alt="Penrose Tiles composition detail" />
-              <div class="media-placeholder">Add `../assets/penrose-gallery-02.png` (1170×2532)</div>
             </div>
             <div class="gallery-panel media-slot reveal">
               <video
@@ -99,12 +168,8 @@
               <div class="video-fallback">Add `../assets/penrose-gallery-03.mp4` (1170×2532)</div>
             </div>
             <div class="gallery-panel media-slot reveal">
-              <img src="../assets/penrose-gallery-04.png" alt="Penrose Tiles gallery image 04" />
-              <div class="media-placeholder">Add `../assets/penrose-gallery-04.png` (1170×2532)</div>
-            </div>
-            <div class="gallery-panel media-slot reveal">
-              <img src="../assets/penrose-gallery-05.png" alt="Penrose Tiles gallery image 05" />
-              <div class="media-placeholder">Add `../assets/penrose-gallery-05.png` (1170×2532)</div>
+              <img src="../assets/penrose-gallery-02.png" alt="Penrose Tiles composition detail" />
+              <div class="media-placeholder">Add `../assets/penrose-gallery-02.png` (1170×2532)</div>
             </div>
             <div class="gallery-panel media-slot reveal">
               <video
@@ -217,6 +282,81 @@
           </div>
         </section>
       </main>
+
+      <footer class="site-footer">
+        <p class="footer-copy">
+          Copyright 2026 Phi &amp; Form. All rights reserved.
+          <span class="footer-sep">•</span>
+          <a class="footer-link" href="../privacy.html">Privacy</a>
+        </p>
+        <div class="footer-socials" aria-label="Social platforms">
+          <a
+            class="footer-social-link"
+            href="mailto:hello@phiandform.com"
+            aria-label="Email"
+          >
+            <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <path
+                d="M4 6.5h16a1.5 1.5 0 0 1 1.5 1.5v8A1.5 1.5 0 0 1 20 17.5H4A1.5 1.5 0 0 1 2.5 16V8A1.5 1.5 0 0 1 4 6.5Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linejoin="round"
+              />
+              <path
+                d="m4 8 8 5 8-5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+          <a
+            class="footer-social-link"
+            href="https://www.instagram.com/phiandform/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Instagram"
+          >
+            <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8" />
+              <circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" stroke-width="1.8" />
+              <circle cx="17.4" cy="6.8" r="1.2" fill="currentColor" />
+            </svg>
+          </a>
+          <a
+            class="footer-social-link"
+            href="https://x.com/phiandform"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="X"
+          >
+            <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <path d="M5 4h3.8l4.2 5.7L17.8 4H19l-5.4 6.7L20 20h-3.8l-4.5-6.1L6.2 20H5l6-7.4Z" fill="currentColor" />
+            </svg>
+          </a>
+          <a
+            class="footer-social-link"
+            href="https://www.youtube.com/@phiandform"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="YouTube"
+          >
+            <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <path
+                d="M21.4 7.8a2.83 2.83 0 0 0-2-2C17.6 5.3 12 5.3 12 5.3s-5.6 0-7.4.5a2.83 2.83 0 0 0-2 2A29.6 29.6 0 0 0 2.1 12a29.6 29.6 0 0 0 .5 4.2 2.83 2.83 0 0 0 2 2c1.8.5 7.4.5 7.4.5s5.6 0 7.4-.5a2.83 2.83 0 0 0 2-2 29.6 29.6 0 0 0 .5-4.2 29.6 29.6 0 0 0-.5-4.2Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linejoin="round"
+              />
+              <path d="M10.2 8.9 15.4 12l-5.2 3.1Z" fill="currentColor" />
+            </svg>
+          </a>
+        </div>
+      </footer>
     </div>
 
     <script src="../script.js?v=20260304"></script>
