@@ -17,21 +17,27 @@
     <link rel="icon" type="image/x-icon" href="../favicon.ico?v=4" />
     <link rel="icon" type="image/png" href="../assets/favicon.png?v=4" />
     <link rel="shortcut icon" href="../favicon.ico?v=4" />
-    <link rel="stylesheet" href="../styles.css?v=20260403" />
+    <link rel="stylesheet" href="../styles.css?v=20260406" />
     <style>
       /* Page-local guardrail: keep Penrose gallery as horizontal thumbnail rail */
       .page-penrose #gallery .gallery-rail {
         display: flex !important;
         flex-wrap: nowrap !important;
-        gap: 18px !important;
+        --gallery-gap: 18px;
+        gap: var(--gallery-gap) !important;
+        justify-content: space-between !important;
         overflow-x: auto !important;
         overflow-y: hidden !important;
+        width: 100% !important;
+        max-width: none !important;
+        padding: 0 0 10px 0 !important;
       }
 
       .page-penrose #gallery .gallery-rail > .gallery-panel {
-        flex: 0 0 188px !important;
-        width: 188px !important;
-        max-width: 188px !important;
+        flex: 0 0 196px !important;
+        width: 196px !important;
+        min-width: 196px !important;
+        max-width: 196px !important;
         aspect-ratio: 1170 / 2532 !important;
         min-height: 0 !important;
         scroll-snap-align: start;
@@ -43,29 +49,30 @@
       .page-penrose #features .penrose-feature-grid,
       .page-penrose #support .section-heading,
       .page-penrose #support .detail-grid {
-        max-width: 940px;
+        width: 100%;
+        max-width: none;
       }
 
       .page-penrose #features .penrose-feature-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        justify-content: start;
-        gap: 20px;
+        justify-content: stretch;
+        gap: 24px;
+      }
+
+      .page-penrose #overview .hero-actions {
+        margin-bottom: 28px;
       }
 
       @media (max-width: 1080px) {
+        .page-penrose #gallery .gallery-rail {
+          justify-content: flex-start !important;
+        }
+
         .page-penrose #gallery .gallery-rail > .gallery-panel {
           flex-basis: 164px !important;
           width: 164px !important;
+          min-width: 164px !important;
           max-width: 164px !important;
-        }
-
-        .page-penrose #gallery .section-heading,
-        .page-penrose #gallery .gallery-rail,
-        .page-penrose #features .section-heading,
-        .page-penrose #features .penrose-feature-grid,
-        .page-penrose #support .section-heading,
-        .page-penrose #support .detail-grid {
-          max-width: none;
         }
 
         .page-penrose #features .penrose-feature-grid {
@@ -78,6 +85,7 @@
         .page-penrose #gallery .gallery-rail > .gallery-panel {
           flex-basis: 146px !important;
           width: 146px !important;
+          min-width: 146px !important;
           max-width: 146px !important;
         }
       }
@@ -199,9 +207,32 @@
           <div class="penrose-feature-grid">
             <article class="detail-card penrose-feature-card reveal">
               <div class="feature-icon-wrap" aria-hidden="true">
-                <svg viewBox="0 0 24 24" focusable="false">
-                  <path d="M12 3 7.5 6.2 6 11.3l3.5 3.5L12 21l2.5-6.2 3.5-3.5-1.5-5.1Z" fill="currentColor" />
-                  <path d="M12 7.2 10 9.1 10.6 12 12 14.3 13.4 12 14 9.1Z" fill="#0f0f10" />
+                <svg viewBox="0 0 96 96" focusable="false" aria-label="Pattern Mode icon">
+                  <rect width="96" height="96" fill="#111318" />
+                  <g transform="translate(48 48) scale(1.12)">
+                    <polygon
+                      points="
+                        0,-28
+                        8,-16
+                        22,-22
+                        16,-8
+                        28,0
+                        16,8
+                        22,22
+                        8,16
+                        0,28
+                        -8,16
+                        -22,22
+                        -16,8
+                        -28,0
+                        -16,-8
+                        -22,-22
+                        -8,-16
+                      "
+                      fill="#F5C400"
+                    />
+                    <circle cx="0" cy="0" r="5" fill="#111318" />
+                  </g>
                 </svg>
               </div>
               <h3>Pattern Mode</h3>
@@ -214,12 +245,12 @@
 
             <article class="detail-card penrose-feature-card reveal">
               <div class="feature-icon-wrap" aria-hidden="true">
-                <svg viewBox="0 0 24 24" focusable="false">
-                  <path d="M12 4a8 8 0 1 0 8 8c0-2.8-1.5-5.4-4-7Z" fill="currentColor" />
-                  <circle cx="9" cy="9.5" r="1.2" fill="#0f0f10" />
-                  <circle cx="6.8" cy="12.6" r="1.2" fill="#0f0f10" />
-                  <circle cx="10.8" cy="14.4" r="1.2" fill="#0f0f10" />
-                  <circle cx="13.8" cy="10.8" r="1.2" fill="#0f0f10" />
+                <svg viewBox="0 0 64 64" focusable="false">
+                  <path d="M32 8c-13 0-24 9-24 20s9 20 20 20h6c4 0 6-2 6-5 0-2-1-4-1-5 0-2 2-3 5-3 6 0 12-4 12-12C56 14 45 8 32 8z" fill="#F4D21F" />
+                  <circle cx="20" cy="24" r="3" fill="#111111" />
+                  <circle cx="30" cy="20" r="3" fill="#111111" />
+                  <circle cx="40" cy="24" r="3" fill="#111111" />
+                  <circle cx="36" cy="34" r="3" fill="#111111" />
                 </svg>
               </div>
               <h3>Color</h3>
@@ -231,11 +262,33 @@
 
             <article class="detail-card penrose-feature-card reveal">
               <div class="feature-icon-wrap" aria-hidden="true">
-                <svg viewBox="0 0 24 24" focusable="false">
-                  <path d="M6 17.5h12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
-                  <path d="M12 6v8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
-                  <path d="m8.5 9.5 3.5-3.5 3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
-                  <rect x="5.5" y="14.5" width="13" height="5" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.6" />
+                <svg viewBox="0 0 96 96" focusable="false">
+                  <rect width="96" height="96" fill="#111318" />
+                  <rect
+                    x="20"
+                    y="28"
+                    width="40"
+                    height="28"
+                    rx="4"
+                    ry="4"
+                    fill="none"
+                    stroke="#F5C400"
+                    stroke-width="4"
+                  />
+                  <rect
+                    x="30"
+                    y="36"
+                    width="40"
+                    height="28"
+                    rx="4"
+                    ry="4"
+                    fill="#F5C400"
+                  />
+                  <polygon
+                    points="36,58 46,48 54,56 60,50 70,62 36,62"
+                    fill="#111318"
+                  />
+                  <circle cx="50" cy="44" r="3.5" fill="#111318" />
                 </svg>
               </div>
               <h3>Export</h3>
@@ -248,10 +301,10 @@
             <article class="detail-card penrose-feature-card reveal">
               <div class="feature-icon-wrap" aria-hidden="true">
                 <svg viewBox="0 0 24 24" focusable="false">
-                  <path d="M5.5 7.2h5.5v10.5H5.5Z" fill="none" stroke="currentColor" stroke-width="1.6" />
-                  <path d="M13 7.2h5.5v10.5H13Z" fill="none" stroke="currentColor" stroke-width="1.6" />
-                  <path d="M8.1 9.5h2.3M8.1 12.2h2.3M14.8 9.5h2.3M14.8 12.2h2.3" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
-                  <path d="M5.5 6h13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                  <rect x="4.5" y="6.5" width="11.5" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.6" />
+                  <rect x="8" y="4.5" width="11.5" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.6" />
+                  <path d="M10 9h6M10 12h6" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+                  <circle cx="9.6" cy="13.8" r="1.2" fill="currentColor" />
                 </svg>
               </div>
               <h3>Browse</h3>
