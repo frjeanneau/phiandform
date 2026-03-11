@@ -1049,14 +1049,49 @@ video {
   height: 22px;
 }
 
-.page-penrose .app-hero .gallery-panel.media-slot.media-slot-tall {
-  min-height: 360px;
-  max-width: 360px;
-  justify-self: start;
+.page-penrose .app-hero .hero-stage {
+  padding-top: 0;
+  min-height: 0;
+  align-self: start;
+  margin-top: -10px;
+}
+
+.page-penrose .app-hero .stage-card-single {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.page-penrose .app-hero .penrose-hero-media {
+  width: clamp(180px, 17vw, 240px);
+  max-width: 240px;
+  aspect-ratio: 1 / 1;
+  min-height: 0;
+}
+
+.page-penrose .app-hero .penrose-hero-media video,
+.page-penrose .app-hero .penrose-hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .page-penrose #gallery .gallery-panel.media-slot {
   min-height: 0;
+}
+
+.page-penrose #overview.section {
+  min-height: auto;
+  align-items: start;
+  padding-top: 10px;
+  padding-bottom: 6px;
+}
+
+.page-penrose #gallery.section {
+  padding-top: 6px;
 }
 
 .page-penrose #gallery .gallery-rail {
@@ -1197,6 +1232,10 @@ video {
     width: 240px;
     max-width: 240px;
     min-height: 0;
+  }
+
+  .page-penrose .app-hero .hero-stage {
+    margin-top: 0;
   }
 
   .app-hero-simple {
