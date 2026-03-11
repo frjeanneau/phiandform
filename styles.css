@@ -1047,8 +1047,8 @@ video {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 46px;
-  height: 46px;
+  width: 52px;
+  height: 52px;
   margin-bottom: 12px;
   color: var(--accent);
   border: 1px solid rgba(244, 215, 31, 0.24);
@@ -1057,8 +1057,8 @@ video {
 }
 
 .feature-icon-wrap svg {
-  width: 22px;
-  height: 22px;
+  width: 34px;
+  height: 34px;
 }
 
 .page-penrose .app-hero .hero-stage {
