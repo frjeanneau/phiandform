@@ -18,19 +18,64 @@
     <link rel="icon" type="image/png" href="../assets/favicon.png?v=4" />
     <link rel="shortcut icon" href="../favicon.ico?v=4" />
     <link rel="stylesheet" href="../styles.css?v=20260331" />
+    <style>
+      /* Page-local guardrail: keep Rhombi gallery as horizontal thumbnail rail */
+      .page-rhombi #gallery .gallery-rail {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        --gallery-gap: 18px;
+        gap: var(--gallery-gap) !important;
+        justify-content: space-between !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        width: 100% !important;
+        max-width: none !important;
+        padding: 0 0 10px 0 !important;
+      }
+
+      .page-rhombi #gallery .gallery-rail > .gallery-panel {
+        flex: 0 0 196px !important;
+        width: 196px !important;
+        min-width: 196px !important;
+        max-width: 196px !important;
+        aspect-ratio: 1170 / 2532 !important;
+      }
+
+      @media (max-width: 1080px) {
+        .page-rhombi #gallery .gallery-rail > .gallery-panel {
+          flex: 0 0 176px !important;
+          width: 176px !important;
+          min-width: 176px !important;
+          max-width: 176px !important;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .page-rhombi #gallery .gallery-rail {
+          padding-bottom: 6px !important;
+        }
+
+        .page-rhombi #gallery .gallery-rail > .gallery-panel {
+          flex: 0 0 146px !important;
+          width: 146px !important;
+          min-width: 146px !important;
+          max-width: 146px !important;
+        }
+      }
+    </style>
   </head>
-  <body>
+  <body class="page-rhombi">
     <div class="page-shell app-shell">
       <div id="page-top"></div>
       <header class="site-header">
-        <a class="brand" href="../index.html#page-top" aria-label="Phi and Form home">
+        <a class="brand" href="../index.html#math-as-art" aria-label="Phi and Form home">
           <span class="brand-logo">
             <img src="../assets/logo.png?v=20260303" alt="Phi and Form logo" />
           </span>
           <span class="brand-fallback">Phi &amp; Form</span>
         </a>
         <nav class="site-nav" aria-label="Primary navigation">
-          <a href="../index.html#page-top">Overview</a>
+          <a href="../index.html#math-as-art">Overview</a>
           <a href="../apps.html">Apps</a>
           <a href="../mathematics.html">Mathematics</a>
         </nav>
@@ -45,122 +90,216 @@
       <main>
         <section class="section app-hero">
           <div class="app-hero-copy reveal">
-            <p class="eyebrow">App two</p>
             <h1>Rhombi Tiles</h1>
             <p class="app-summary">
               Rhombi Tiles is a Phi &amp; Form app for building visual
               compositions from rhombus-based systems. It turns repetition,
               symmetry, and local rule into something tactile, playful, and
-              immediate.
+              immediate. By arranging rhombi directly, you can discover how
+              symmetry, adjacency, and proportion create visual coherence.
             </p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#media">See the visuals</a>
-              <a class="button button-ghost" href="#mathematics">Read the mathematics</a>
+              <a class="button button-primary" href="#gallery">See the gallery</a>
+              <a class="button button-ghost" href="#features">Explore features</a>
+              <a class="button button-ghost" href="#support">Get support</a>
             </div>
           </div>
 
           <div class="hero-stage reveal">
             <div class="orb orb-large"></div>
             <div class="orb orb-small"></div>
-            <div class="stage-card">
-              <div class="stage-topline">
-                <span>Concept preview</span>
-                <span>Rhombi Tiles</span>
-              </div>
-              <div class="stage-grid">
-                <div class="gallery-panel media-slot media-slot-tall">
-                  <img src="../assets/screenshot-02.png" alt="Rhombi Tiles interface" />
-                  <div class="media-placeholder">Add `../assets/screenshot-02.png`</div>
-                </div>
-                <div class="stage-copy">
-                  <p class="mini-label">What it offers</p>
-                  <h2>Compose with repetition, symmetry, and variation.</h2>
-                  <p>
-                    Rhombi Tiles makes geometric structure something you can
-                    arrange directly, then understand through the patterns that
-                    emerge.
-                  </p>
-                </div>
+            <div class="stage-card stage-card-single">
+              <div class="gallery-panel media-slot rhombi-hero-media">
+                <video
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                  webkit-playsinline
+                  preload="auto"
+                  poster="../assets/rhombi-gallery-01.png"
+                >
+                  <source src="../assets/rhombi-gallery-00.mp4" type="video/mp4" />
+                </video>
+                <div class="video-fallback">Add `../assets/rhombi-gallery-00.mp4`</div>
               </div>
             </div>
           </div>
         </section>
 
-        <section class="section" id="overview">
-          <div class="detail-grid">
-            <article class="detail-card reveal">
-              <p class="mini-label">Overview</p>
-              <h2>A study in rhombus tilings and visual order.</h2>
-              <p>
-                Rhombi Tiles focuses on the expressive power of simple
-                quadrilateral rules. By arranging rhombi directly, users can
-                discover how symmetry, adjacency, and proportion produce visual
-                coherence.
-              </p>
-              <p>
-                The page structure mirrors the app itself: lead with the visual
-                result, then explain the system behind it.
-              </p>
-            </article>
-            <article class="detail-card reveal">
-              <p class="mini-label">On this page</p>
-              <h3>Suggested app-page structure</h3>
-              <ul class="bullet-list">
-                <li>What the app does</li>
-                <li>Screenshots and motion clips</li>
-                <li>How the rhombus system behaves</li>
-                <li>The mathematics behind the tiling</li>
-              </ul>
-            </article>
+        <section class="section" id="gallery">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Gallery</p>
+            <a class="back-to-top" href="#page-top">Back to top ↑</a>
+          </div>
+          <div class="gallery-rail reveal" aria-label="Rhombi media gallery">
+            <div class="gallery-panel media-slot reveal">
+              <img src="../assets/rhombi-gallery-01.png" alt="Rhombi Tiles screenshot" />
+              <div class="media-placeholder">Add `../assets/rhombi-gallery-01.png` (1170×2532)</div>
+            </div>
+            <div class="gallery-panel media-slot reveal">
+              <video
+                autoplay
+                loop
+                muted
+                playsinline
+                webkit-playsinline
+                preload="auto"
+              >
+                <source src="../assets/rhombi-gallery-02.mp4" type="video/mp4" />
+              </video>
+              <div class="video-fallback">Add `../assets/rhombi-gallery-02.mp4` (1170×2532)</div>
+            </div>
+            <div class="gallery-panel media-slot reveal">
+              <img src="../assets/rhombi-gallery-03.png" alt="Rhombi Tiles composition detail" />
+              <div class="media-placeholder">Add `../assets/rhombi-gallery-03.png` (1170×2532)</div>
+            </div>
+            <div class="gallery-panel media-slot reveal">
+              <video
+                autoplay
+                loop
+                muted
+                playsinline
+                webkit-playsinline
+                preload="auto"
+              >
+                <source src="../assets/rhombi-gallery-04.mp4" type="video/mp4" />
+              </video>
+              <div class="video-fallback">Add `../assets/rhombi-gallery-04.mp4` (1170×2532)</div>
+            </div>
+            <div class="gallery-panel media-slot reveal">
+              <img src="../assets/rhombi-gallery-05.png" alt="Rhombi Tiles gallery image 05" />
+              <div class="media-placeholder">Add `../assets/rhombi-gallery-05.png` (1170×2532)</div>
+            </div>
           </div>
         </section>
 
-        <section class="section" id="media">
+        <section class="section" id="features">
           <div class="section-heading reveal">
-            <p class="eyebrow">Media</p>
-            <h2>Use this page for screenshots, diagrams, and motion once the second app assets are ready.</h2>
+            <p class="eyebrow">Features</p>
+            <a class="back-to-top" href="#page-top">Back to top ↑</a>
           </div>
-          <div class="gallery-grid">
-            <div class="gallery-panel media-slot reveal">
-              <div class="media-placeholder">Add `../assets/screenshot-02.png`</div>
-            </div>
-            <div class="gallery-panel media-slot reveal">
-              <div class="media-placeholder">Add `../assets/screenshot-03.png` or a rhombus diagram</div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section" id="mathematics">
-          <div class="section-heading reveal">
-            <p class="eyebrow">Mathematics</p>
-            <h2>The app page is where the tiling rules and symmetry logic become visible.</h2>
-          </div>
-          <div class="detail-grid">
-            <article class="detail-card reveal">
-              <p class="mini-label">Core ideas</p>
-              <h3>Rhombus tilings</h3>
+          <div class="penrose-feature-grid">
+            <article class="detail-card penrose-feature-card reveal">
+              <div class="feature-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 96 96" focusable="false" aria-label="Pattern Mode icon">
+                  <rect width="96" height="96" fill="#111318" />
+                  <g transform="translate(48 48) scale(1.12)">
+                    <polygon
+                      points="
+                        0,-28
+                        8,-16
+                        22,-22
+                        16,-8
+                        28,0
+                        16,8
+                        22,22
+                        8,16
+                        0,28
+                        -8,16
+                        -22,22
+                        -16,8
+                        -28,0
+                        -16,-8
+                        -22,-22
+                        -8,-16
+                      "
+                      fill="#F5C400"
+                    />
+                    <circle cx="0" cy="0" r="5" fill="#111318" />
+                  </g>
+                </svg>
+              </div>
+              <h3>Pattern Mode</h3>
               <p>
-                Rhombi create a versatile family of tilings because their angles
-                and edge lengths can lock together in multiple ways while still
-                preserving local consistency across the surface.
+                Build a repeating center and the pattern expands outward,
+                mirroring your choices to form symmetric fields of rhombi.
               </p>
             </article>
-            <article class="detail-card reveal">
-              <p class="mini-label">Core ideas</p>
-              <h3>Symmetry and variation</h3>
+
+            <article class="detail-card penrose-feature-card reveal">
+              <div class="feature-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 64 64" focusable="false">
+                  <path d="M32 8c-13 0-24 9-24 20s9 20 20 20h6c4 0 6-2 6-5 0-2-1-4-1-5 0-2 2-3 5-3 6 0 12-4 12-12C56 14 45 8 32 8z" fill="#F4D21F" />
+                  <circle cx="20" cy="24" r="3" fill="#111111" />
+                  <circle cx="30" cy="20" r="3" fill="#111111" />
+                  <circle cx="40" cy="24" r="3" fill="#111111" />
+                  <circle cx="36" cy="34" r="3" fill="#111111" />
+                </svg>
+              </div>
+              <h3>Color</h3>
               <p>
-                Repetition, rotation, and reflection provide the grammar of the
-                system, while small changes in arrangement create a wide range
-                of visual outcomes from the same underlying rules.
+                Apply palettes to highlight symmetry, rhythm, and contrast
+                as the tiling grows.
+              </p>
+            </article>
+
+            <article class="detail-card penrose-feature-card reveal">
+              <div class="feature-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 96 96" focusable="false">
+                  <rect width="96" height="96" fill="#111318" />
+                  <rect
+                    x="20"
+                    y="28"
+                    width="40"
+                    height="28"
+                    rx="4"
+                    ry="4"
+                    fill="none"
+                    stroke="#F5C400"
+                    stroke-width="4"
+                  />
+                  <rect
+                    x="30"
+                    y="36"
+                    width="40"
+                    height="28"
+                    rx="4"
+                    ry="4"
+                    fill="#F5C400"
+                  />
+                  <polygon
+                    points="36,58 46,48 54,56 60,50 70,62 36,62"
+                    fill="#111318"
+                  />
+                  <circle cx="50" cy="44" r="3.5" fill="#111318" />
+                </svg>
+              </div>
+              <h3>Export</h3>
+              <p>
+                Export screenshots, short replay movies, and saved designs to
+                revisit later.
+              </p>
+            </article>
+
+            <article class="detail-card penrose-feature-card reveal">
+              <div class="feature-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 96 96" focusable="false" aria-label="Library icon">
+                  <rect width="96" height="96" fill="#111318" />
+                  <g fill="none" stroke="#F5C400" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="22" y="28" width="10" height="38" rx="2" />
+                    <rect x="36" y="34" width="12" height="32" rx="2" />
+                    <line x1="39" y1="44" x2="45" y2="44" />
+                    <path d="M56 28 L68 28 Q71 28 71 31 L71 66 Q71 69 68 69 L58 69 Q55 69 54 66 L50 33 Q49.5 30 52 28.5 Q53.5 28 56 28 Z" />
+                  </g>
+                </svg>
+              </div>
+              <h3>Browse</h3>
+              <p>
+                Explore the Library for saved designs and the Gallery for
+                built‑in compositions.
               </p>
             </article>
           </div>
         </section>
 
         <section class="section" id="support">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Support</p>
+            <a class="back-to-top" href="#page-top">Back to top ↑</a>
+          </div>
           <div class="detail-grid">
             <article class="detail-card reveal">
-              <p class="mini-label">Support</p>
               <h2>Need help with Rhombi Tiles?</h2>
               <p>
                 For questions, feedback, or technical issues with Rhombi Tiles,
@@ -173,6 +312,81 @@
           </div>
         </section>
       </main>
+
+      <footer class="site-footer">
+        <p class="footer-copy">
+          Copyright 2026 Phi &amp; Form. All rights reserved.
+          <span class="footer-sep">•</span>
+          <a class="footer-link" href="../privacy.html">Privacy</a>
+        </p>
+        <div class="footer-socials" aria-label="Social platforms">
+          <a
+            class="footer-social-link"
+            href="mailto:hello@phiandform.com"
+            aria-label="Email"
+          >
+            <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <path
+                d="M4 6.5h16a1.5 1.5 0 0 1 1.5 1.5v8A1.5 1.5 0 0 1 20 17.5H4A1.5 1.5 0 0 1 2.5 16V8A1.5 1.5 0 0 1 4 6.5Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linejoin="round"
+              />
+              <path
+                d="m4 8 8 5 8-5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+          <a
+            class="footer-social-link"
+            href="https://www.instagram.com/phiandform/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Instagram"
+          >
+            <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8" />
+              <circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" stroke-width="1.8" />
+              <circle cx="17.4" cy="6.8" r="1.2" fill="currentColor" />
+            </svg>
+          </a>
+          <a
+            class="footer-social-link"
+            href="https://x.com/phiandform"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="X"
+          >
+            <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <path d="M5 4h3.8l4.2 5.7L17.8 4H19l-5.4 6.7L20 20h-3.8l-4.5-6.1L6.2 20H5l6-7.4Z" fill="currentColor" />
+            </svg>
+          </a>
+          <a
+            class="footer-social-link"
+            href="https://www.youtube.com/@phiandform"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="YouTube"
+          >
+            <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <path
+                d="M21.4 7.8a2.83 2.83 0 0 0-2-2C17.6 5.3 12 5.3 12 5.3s-5.6 0-7.4.5a2.83 2.83 0 0 0-2 2A29.6 29.6 0 0 0 2.1 12a29.6 29.6 0 0 0 .5 4.2 2.83 2.83 0 0 0 2 2c1.8.5 7.4.5 7.4.5s5.6 0 7.4-.5a2.83 2.83 0 0 0 2-2 29.6 29.6 0 0 0 .5-4.2 29.6 29.6 0 0 0-.5-4.2Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linejoin="round"
+              />
+              <path d="M10.2 8.9 15.4 12l-5.2 3.1Z" fill="currentColor" />
+            </svg>
+          </a>
+        </div>
+      </footer>
     </div>
 
     <script src="../script.js?v=20260303"></script>
