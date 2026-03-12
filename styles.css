@@ -1240,6 +1240,15 @@ video {
   object-fit: contain;
 }
 
+@media (min-width: 761px) {
+  .page-penrose #features.section,
+  .page-penrose #support.section,
+  .page-rhombi #features.section,
+  .page-rhombi #support.section {
+    padding-top: 6px;
+  }
+}
+
 .bullet-list {
   margin: 18px 0 0;
   padding-left: 18px;
