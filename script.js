@@ -10,6 +10,65 @@ document.querySelectorAll('a[href="#page-top"]').forEach((link) => {
   });
 });
 
+const getStickyAnchorOffset = () => {
+  const stickyElements = [
+    document.querySelector(".site-header"),
+    document.querySelector(".page-subnav"),
+  ].filter(Boolean);
+
+  if (!stickyElements.length) {
+    return 0;
+  }
+
+  let offset = 0;
+
+  stickyElements.forEach((element) => {
+    const styles = window.getComputedStyle(element);
+    const top = Number.parseFloat(styles.top) || 0;
+    const marginBottom = Number.parseFloat(styles.marginBottom) || 0;
+    const height = element.getBoundingClientRect().height;
+    offset = Math.max(offset, top + height + marginBottom);
+  });
+
+  return Math.ceil(offset + 8);
+};
+
+document
+  .querySelectorAll('a[href^="#"]:not([href="#page-top"])')
+  .forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const hash = link.getAttribute("href");
+
+      if (!hash || hash === "#") {
+        return;
+      }
+
+      const target = document.querySelector(hash);
+
+      if (!target) {
+        return;
+      }
+
+      event.preventDefault();
+
+      const targetTop =
+        target.getBoundingClientRect().top +
+        window.scrollY -
+        getStickyAnchorOffset();
+
+      window.scrollTo({
+        top: Math.max(0, targetTop),
+        behavior: "smooth",
+      });
+
+      if (window.history && typeof window.history.pushState === "function") {
+        window.history.pushState(null, "", hash);
+      } else {
+        window.location.hash = hash;
+      }
+    });
+  });
+
 if ("IntersectionObserver" in window) {
   const revealObserver = new IntersectionObserver(
     (entries) => {
