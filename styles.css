@@ -1085,14 +1085,6 @@ video {
   align-items: start;
 }
 
-.page-rhombi .section {
-  padding: 32px 0;
-}
-
-.page-rhombi #gallery.section {
-  padding-top: 16px;
-}
-
 .page-penrose .app-hero .stage-card-single {
   padding: 0;
   display: flex;
@@ -1411,7 +1403,7 @@ video {
      Increase anchor offset so section titles never land underneath them. */
   .page-penrose .section,
   .page-rhombi .section {
-    scroll-margin-top: 228px;
+    scroll-margin-top: 272px;
   }
 
   /* Overview page subsection anchors need the same clearance on mobile. */
