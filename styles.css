@@ -1407,6 +1407,19 @@ video {
     scroll-margin-top: 148px;
   }
 
+  /* App pages have two stacked sticky bars on mobile (header + page subnav).
+     Increase anchor offset so section titles never land underneath them. */
+  .page-penrose .section,
+  .page-rhombi .section {
+    scroll-margin-top: 228px;
+  }
+
+  /* Overview page subsection anchors need the same clearance on mobile. */
+  main #studio.section,
+  main #apps.section {
+    scroll-margin-top: 228px;
+  }
+
   .page-shell {
     padding: 16px 16px 40px;
   }
