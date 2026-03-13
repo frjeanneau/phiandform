@@ -88,6 +88,12 @@ video {
   padding-top: 12px;
 }
 
+.page-subnav + main #foundations.section,
+.page-subnav + main #rhombus.section,
+.page-subnav + main #penrose.section {
+  padding-top: 12px;
+}
+
 .site-header {
   position: sticky;
   top: 16px;
@@ -1448,6 +1454,12 @@ video {
   /* Overview page subsection anchors need the same clearance on mobile. */
   main #studio.section,
   main #apps.section {
+    scroll-margin-top: 228px;
+  }
+
+  main #foundations.section,
+  main #rhombus.section,
+  main #penrose.section {
     scroll-margin-top: 228px;
   }
 
