@@ -140,16 +140,12 @@
                 correctly.
               </p>
             </article>
-            <article class="detail-card reveal">
+            <article class="detail-card reveal visual-guide-card visual-guide-card-rhombus">
               <p class="mini-label">Visual guide</p>
               <div class="gallery-panel media-slot">
                 <img src="assets/math-rhombi-guide.png" alt="Rhombus tiling visual guide" />
                 <div class="media-placeholder">Add `assets/math-rhombi-guide.png`</div>
               </div>
-              <p>
-                Use a simple diagram to show how rhombi lock together and how
-                angles control the larger grid.
-              </p>
             </article>
           </div>
         </section>
@@ -162,40 +158,62 @@
           <div class="detail-grid">
             <article class="detail-card reveal">
               <p class="mini-label">What it is</p>
-              <h3>Penrose tilings create aperiodic structure from two shapes.</h3>
               <p>
-                Penrose tilings use a small set of tiles and matching rules to
-                fill the plane without repeating. The patterns feel structured
-                because the rules are strict, but they never lock into a simple
-                periodic grid.
+                A Penrose tiling is a family of aperiodic tilings defined by
+                strict local matching rules. Penrose systems are not always made
+                from rhombi; some use kite-and-dart tiles.
               </p>
               <p>
-                Both Penrose tile types are built on the same base angle step:
-                180/5&deg; (36&deg;). Each tile angle is an integer multiple of that
-                step (1x for thin, 2x for thick), with complementary angles
-                completing each rhombus (36&deg;/144&deg; and 72&deg;/108&deg;).
+                The Penrose Tiles app uses the rhombus version, commonly called
+                P3. It is built from two equal-edge rhombi - a thin rhombus and
+                a thick rhombus - together with edge-matching rules that enforce
+                non-periodic order.
               </p>
+              <p>
+                These rhombi are closely related to two complementary
+                golden-triangle forms:
+              </p>
+              <ul class="bullet-list">
+                <li>golden triangle: 36&deg;, 72&deg;, 72&deg;</li>
+                <li>golden gnomon: 36&deg;, 36&deg;, 108&deg;</li>
+              </ul>
+              <p>
+                A golden triangle is an isosceles triangle in which the ratio of
+                an equal side to the base is the golden ratio, &phi; &asymp; 1.618.
+              </p>
+              <p>
+                A golden gnomon is the complementary isosceles triangle with
+                angles 36&deg;, 36&deg;, 108&deg;.
+              </p>
+              <p>
+                Across history, golden-ratio triangles have also been used in
+                design and architecture to express proportion and visual harmony.
+              </p>
+              <p>
+                This shared geometry is what gives the tiling its distinctive
+                fivefold structure.
+              </p>
+              <p>
+                In the app, both Penrose rhombus types are built on the same
+                base angle step: 180/5&deg; = 36&deg;. Each tile angle is an integer
+                multiple of that step (1x, 2x, and their complements):
+              </p>
+              <ul class="bullet-list">
+                <li>Thin: acute 36&deg;, obtuse 144&deg;</li>
+                <li>Thick: acute 72&deg;, obtuse 108&deg;</li>
+              </ul>
               <p>
                 So if you rotate tiles in increments of 36&deg;, their edges and
                 corners stay on the same 5-fold angular grid and align/snap
                 correctly.
               </p>
-              <ul class="bullet-list">
-                <li>Two tile types with matching rules</li>
-                <li>Aperiodic (non-repeating) order</li>
-                <li>Global coherence from local constraints</li>
-              </ul>
             </article>
-            <article class="detail-card reveal">
+            <article class="detail-card reveal visual-guide-card visual-guide-card-penrose">
               <p class="mini-label">Visual guide</p>
               <div class="gallery-panel media-slot">
                 <img src="assets/math-penrose-guide.png" alt="Penrose tiling visual guide" />
                 <div class="media-placeholder">Add `assets/math-penrose-guide.png`</div>
               </div>
-              <p>
-                A small schematic can explain the matching rules and show how
-                local constraints generate the full pattern.
-              </p>
             </article>
           </div>
         </section>
