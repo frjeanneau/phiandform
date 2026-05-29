@@ -88,9 +88,10 @@ video {
   padding-top: 12px;
 }
 
-.page-subnav + main #foundations.section,
+.page-subnav + main #penrose.section,
 .page-subnav + main #rhombus.section,
-.page-subnav + main #penrose.section {
+.page-subnav + main #spectre.section,
+.page-subnav + main #mosaic.section {
   padding-top: 12px;
 }
 
@@ -252,6 +253,27 @@ video {
 .text-link {
   color: var(--accent);
   font-weight: 700;
+}
+
+.origin-callout {
+  border-left: 3px solid rgba(245, 196, 0, 0.5);
+  padding: 14px 20px;
+  margin: 32px 0 0;
+  border-radius: 0 8px 8px 0;
+  background: rgba(245, 196, 0, 0.05);
+}
+
+.origin-callout p {
+  margin: 0;
+  font-size: 0.88rem;
+  opacity: 0.75;
+  line-height: 1.55;
+}
+
+.origin-callout a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .eyebrow,
@@ -795,6 +817,53 @@ video {
   margin-top: 10px;
 }
 
+/* Feature card two-column layout */
+.app-card-feature {
+  grid-column: 1 / -1;
+  grid-template-columns: 1fr 1fr;
+  padding: 0;
+  gap: 0;
+  align-items: start;
+}
+
+.app-card-feature .app-card-main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+}
+
+.app-card-side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 20px 20px 24px;
+  border-left: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.app-side-media {
+  display: flex;
+  justify-content: center;
+}
+
+.app-side-media video {
+  max-width: 100%;
+  max-height: 460px;
+  border-radius: 12px;
+  display: block;
+  background: #050505;
+}
+
+.app-side-copy .mini-label {
+  margin-bottom: 10px;
+}
+
+.app-side-copy p {
+  margin: 0;
+  opacity: 0.72;
+  line-height: 1.6;
+}
+
 .card-download {
   margin-top: 0;
   align-self: flex-start;
@@ -811,6 +880,11 @@ video {
 .math-card,
 .story-card {
   min-height: 100%;
+}
+
+.story-card {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .story-card-hero {
@@ -1055,6 +1129,7 @@ video {
 
 .visual-guide-card-rhombus .gallery-panel.media-slot {
   aspect-ratio: 1 / 1;
+  background: #080808;
 }
 
 .visual-guide-card-rhombus .gallery-panel.media-slot img {
@@ -1064,12 +1139,43 @@ video {
 
 .visual-guide-card-penrose .gallery-panel.media-slot {
   aspect-ratio: 5 / 4;
+  background: #080808;
 }
 
 .visual-guide-card-penrose .gallery-panel.media-slot img {
-  object-fit: cover;
-  object-position: center center;
+  object-fit: contain;
+  object-position: center;
 }
+
+.visual-guide-card-spectre .gallery-panel.media-slot {
+  aspect-ratio: 4 / 3;
+  background: #080808;
+}
+
+.visual-guide-card-spectre .gallery-panel.media-slot img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.visual-guide-card-mosaic .gallery-panel.media-slot {
+  aspect-ratio: 3 / 4;
+  width: min(100%, 315px);
+  background: #080808;
+}
+
+.visual-guide-card-mosaic .gallery-panel.media-slot img {
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Mathematics page hero — no full-viewport min-height */
+.page-math .app-hero {
+  min-height: auto;
+  align-items: start;
+  padding-top: 8px;
+  padding-bottom: 0;
+}
+
 
 .penrose-feature-grid {
   display: grid;
@@ -1099,60 +1205,49 @@ video {
   height: 34px;
 }
 
-.page-penrose .app-hero .hero-stage {
-  padding-top: 0;
-  min-height: 0;
-  align-self: start;
-  margin-top: -10px;
-  display: flex;
-  justify-content: center;
-  justify-self: stretch;
-}
-
+.page-penrose .app-hero .hero-stage,
 .page-rhombi .app-hero .hero-stage {
   padding-top: 0;
   min-height: 0;
-  align-self: start;
-  margin-top: -10px;
+  align-self: center;
+  margin-top: 0;
   display: flex;
   justify-content: center;
   justify-self: stretch;
 }
 
-.page-rhombi .app-hero {
-  align-items: start;
-}
-
-.page-penrose .app-hero .stage-card-single {
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  background: transparent;
-  border: 0;
-  box-shadow: none;
-}
-
-.page-rhombi .app-hero .stage-card-single {
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  background: transparent;
-  border: 0;
-  box-shadow: none;
-}
-
-.page-penrose .app-hero .penrose-hero-media {
-  width: clamp(210px, 18vw, 270px);
-  max-width: 270px;
-  aspect-ratio: 1 / 1;
+.page-phi .app-hero .hero-stage {
+  padding-top: 0;
   min-height: 0;
-  padding: 8px;
-  background: #050505;
+  align-self: center;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  justify-self: stretch;
 }
 
-.page-rhombi .app-hero .rhombi-hero-media {
-  width: clamp(210px, 18vw, 270px);
-  max-width: 270px;
+.page-penrose .app-hero,
+.page-rhombi .app-hero,
+.page-phi .app-hero {
+  align-items: center;
+}
+
+.page-penrose .app-hero .stage-card-single,
+.page-rhombi .app-hero .stage-card-single,
+.page-phi .app-hero .stage-card-single {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.page-penrose .app-hero .penrose-hero-media,
+.page-rhombi .app-hero .rhombi-hero-media,
+.page-phi .app-hero .phi-hero-media {
+  width: clamp(300px, 28vw, 440px);
+  max-width: 440px;
   aspect-ratio: 1 / 1;
   min-height: 0;
   padding: 8px;
@@ -1160,16 +1255,11 @@ video {
 }
 
 .page-penrose .app-hero .penrose-hero-media video,
-.page-penrose .app-hero .penrose-hero-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center center;
-  border-radius: calc(var(--radius-lg) - 8px);
-}
-
+.page-penrose .app-hero .penrose-hero-media img,
 .page-rhombi .app-hero .rhombi-hero-media video,
-.page-rhombi .app-hero .rhombi-hero-media img {
+.page-rhombi .app-hero .rhombi-hero-media img,
+.page-phi .app-hero .phi-hero-media video,
+.page-phi .app-hero .phi-hero-media img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -1181,7 +1271,8 @@ video {
   min-height: 0 !important;
 }
 
-.page-rhombi #gallery .gallery-panel.media-slot {
+.page-rhombi #gallery .gallery-panel.media-slot,
+.page-phi #gallery .gallery-panel.media-slot {
   min-height: 0 !important;
 }
 
@@ -1192,7 +1283,8 @@ video {
   padding-bottom: 6px;
 }
 
-.page-rhombi #overview.section {
+.page-rhombi #overview.section,
+.page-phi #overview.section {
   min-height: auto;
   align-items: start;
   padding-top: 10px;
@@ -1420,8 +1512,23 @@ video {
     grid-template-columns: 1fr;
   }
 
+  .app-card-side {
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 24px 20px 20px;
+  }
+
   .stage-media {
     max-width: min(420px, 100%);
+    max-height: 420px;
+    overflow: hidden;
+    justify-self: center;
+    width: 100%;
+  }
+
+  .stage-copy {
+    justify-self: stretch;
+    max-width: 100%;
   }
 
   .hero-metrics,
@@ -1457,9 +1564,10 @@ video {
     scroll-margin-top: 228px;
   }
 
-  main #foundations.section,
+  main #penrose.section,
   main #rhombus.section,
-  main #penrose.section {
+  main #spectre.section,
+  main #mosaic.section {
     scroll-margin-top: 228px;
   }
 
@@ -1611,6 +1719,14 @@ video {
     padding: 20px;
   }
 
+  .story-card {
+    min-height: auto;
+  }
+
+  .story-grid {
+    gap: 10px;
+  }
+
   .media-slot-tall,
   .gallery-panel.media-slot {
     min-height: 320px;
@@ -1628,6 +1744,14 @@ video {
 
   .visual-guide-card-penrose .gallery-panel.media-slot {
     aspect-ratio: 5 / 4;
+  }
+
+  .visual-guide-card-spectre .gallery-panel.media-slot {
+    aspect-ratio: 4 / 3;
+  }
+
+  .visual-guide-card-mosaic .gallery-panel.media-slot {
+    aspect-ratio: 3 / 4;
   }
 
   .app-choice-card {

@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- test -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,7 +6,7 @@
     <title>Mathematics | Phi &amp; Form</title>
     <meta
       name="description"
-      content="Explore the mathematical ideas behind Phi and Form, including Penrose tilings, rhombus tilings, symmetry, and non-repeating order."
+      content="Explore the mathematical ideas behind Phi and Form's four tile families: Mosaic, Rhombus, Penrose, and Spectre — from periodic grids to aperiodic monotiles."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,10 +17,10 @@
     <link rel="icon" type="image/x-icon" href="./favicon.ico?v=4" />
     <link rel="icon" type="image/png" href="./assets/favicon.png?v=4" />
     <link rel="shortcut icon" href="./favicon.ico?v=4" />
-    <link rel="stylesheet" href="./styles.css?v=20260331" />
+    <link rel="stylesheet" href="./styles.css?v=20260528" />
   </head>
   <body>
-    <div class="page-shell app-shell">
+    <div class="page-shell app-shell page-math">
       <div id="page-top"></div>
       <header class="site-header">
         <a class="brand" href="./index.html#page-top" aria-label="Phi and Form home">
@@ -38,9 +37,11 @@
       </header>
 
       <nav class="page-subnav" aria-label="Mathematics sections">
-        <a href="#page-top">Foundations</a>
+        <a href="#page-top">Intro</a>
+        <a href="#mosaic">Mosaic</a>
         <a href="#rhombus">Rhombus</a>
         <a href="#penrose">Penrose</a>
+        <a href="#spectre">Spectre</a>
       </nav>
 
       <main>
@@ -71,31 +72,40 @@
           </div>
         </section>
 
-        <section class="section" id="foundations">
+        <section class="section" id="mosaic">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Mosaic</p>
+            <a class="back-to-top" href="#page-top">Back to top ↑</a>
+          </div>
           <div class="detail-grid">
             <article class="detail-card reveal">
-              <p class="mini-label">Underlying Geometry</p>
-              <h2>Mathematics and art share a common language: structure.</h2>
+              <p class="mini-label">6 tiles &middot; Periodic</p>
               <p>
-                The most resonant visual systems often begin with a few simple
-                rules. Geometry gives form, proportion creates harmony, and
-                repetition sets rhythm. From those constraints, patterns emerge
-                that feel both precise and unexpected.
+                The Mosaic set uses six tile shapes — equilateral triangle,
+                square, hexagon, trapezoid, parallelogram, and narrow rhombus —
+                all built on a shared 60&deg; angle grid. The first three are
+                regular polygons; the other three are complementary shapes whose
+                angles are multiples of 30&deg;, keeping every edge and corner
+                on the same underlying grid.
               </p>
               <p>
-                This page traces the mathematical structures behind
-                Phi &amp; Form&rsquo;s apps - the angles, symmetries, matching
-                rules, and tiling systems that define each visual world.
+                This shared angle system is what allows the tiles to fit
+                together cleanly, forming patterns that repeat with exact
+                translational symmetry in two directions.
+              </p>
+              <p>
+                These shapes have appeared across centuries of decorative
+                tilework — in Islamic geometric patterns, Roman floor mosaics,
+                and architectural facades worldwide. The same underlying
+                geometry: simple angle rules, endlessly extendable patterns.
               </p>
             </article>
-            <article class="detail-card reveal">
-              <p class="mini-label">Ways of Reading a Pattern</p>
-              <h3>Three ways to read the system</h3>
-              <ul class="bullet-list">
-                <li>The small set of shapes behind it</li>
-                <li>The balance between repetition and variation</li>
-                <li>The way local rules create global form</li>
-              </ul>
+            <article class="detail-card reveal visual-guide-card visual-guide-card-mosaic">
+              <p class="mini-label">Visual guide</p>
+              <div class="gallery-panel media-slot">
+                <img src="assets/math-archimedean-guide.png" alt="Mosaic tile family visual guide" />
+                <div class="media-placeholder">Add `assets/math-archimedean-guide.png`</div>
+              </div>
             </article>
           </div>
         </section>
@@ -107,28 +117,12 @@
           </div>
           <div class="detail-grid">
             <article class="detail-card reveal">
-              <p class="mini-label">What it is</p>
+              <p class="mini-label">3 tiles &middot; Symmetric</p>
               <p>
-                A rhombus is a quadrilateral (four-sided polygon) with all four
-                sides equal, so it is an equilateral parallelogram. It is often
-                described as a tilted square or a diamond shape. Key properties
-                include:
-              </p>
-              <ul class="bullet-list">
-                <li>Opposite angles are equal.</li>
-                <li>Opposite sides are parallel.</li>
-                <li>The diagonals bisect each other at right angles.</li>
-              </ul>
-              <p>
-                The Rhombi Tiles app explores how a small set of angles can
-                tile a surface, creating patterns that repeat, reflect, and
-                rotate with clear visual rhythm.
-              </p>
-              <p>
-                In the app, all three rhombus tile types are built on the same
-                base angle step: 180/7&deg; (about 25.714&deg;). Each tile angle
-                is an integer multiple of that step (1&times;, 2&times;,
-                3&times;, and their complements):
+                The Rhombus family uses three tile shapes — thin, medium, and
+                wide — all built on the same base angle step:
+                180&deg;&thinsp;&divide;&thinsp;7 (&asymp;&nbsp;25.714&deg;).
+                Each tile angle is an integer multiple of that step:
               </p>
               <ul class="bullet-list">
                 <li>Thin: acute 180/7&deg;, obtuse 1080/7&deg;</li>
@@ -136,9 +130,14 @@
                 <li>Wide: acute 540/7&deg;, obtuse 720/7&deg;</li>
               </ul>
               <p>
-                So if you rotate tiles in increments of 180/7&deg;, their edges
-                and corners stay on the same 7-fold angular grid and align/snap
-                correctly.
+                This 7-fold angle grid gives the tiling its rotational symmetry.
+                Rotating any tile in increments of 180/7&deg; keeps all edges
+                and corners on the same angular grid, so they always align.
+              </p>
+              <p>
+                The Rhombus family is not aperiodic. The tiles form symmetric,
+                repeating patterns — a distinct mathematical world with its own
+                visual logic.
               </p>
             </article>
             <article class="detail-card reveal visual-guide-card visual-guide-card-rhombus">
@@ -158,55 +157,28 @@
           </div>
           <div class="detail-grid">
             <article class="detail-card reveal">
-              <p class="mini-label">What it is</p>
+              <p class="mini-label">2 tiles &middot; Aperiodic</p>
               <p>
-                A Penrose tiling is a family of aperiodic tilings defined by
-                strict local matching rules. Penrose systems are not always made
-                from rhombi; some use kite-and-dart tiles.
+                The Penrose tiling uses two golden rhombuses — a thin rhombus
+                and a thick rhombus — each constructed from two golden
+                triangles, whose sides are in ratio &phi;. Held together by
+                edge-matching rules, they force an aperiodic arrangement: the
+                pattern never repeats, no matter how far it extends.
               </p>
               <p>
-                The Penrose Tiles app uses the rhombus version, commonly called
-                P3. It is built from two equal-edge rhombi - a thin rhombus and
-                a thick rhombus - together with edge-matching rules that enforce
-                non-periodic order.
-              </p>
-              <p>
-                These rhombi are closely related to two complementary
-                golden-triangle forms:
-              </p>
-              <ul class="bullet-list">
-                <li>golden triangle: 36&deg;, 72&deg;, 72&deg;</li>
-                <li>golden gnomon: 36&deg;, 36&deg;, 108&deg;</li>
-              </ul>
-              <p>
-                A golden triangle is an isosceles triangle in which the ratio of
-                an equal side to the base is the golden ratio, &phi; &asymp; 1.618.
-              </p>
-              <p>
-                A golden gnomon is the complementary isosceles triangle with
-                angles 36&deg;, 36&deg;, 108&deg;.
-              </p>
-              <p>
-                Across history, golden-ratio triangles have also been used in
-                design and architecture to express proportion and visual harmony.
-              </p>
-              <p>
-                This shared geometry is what gives the tiling its distinctive
-                fivefold structure.
-              </p>
-              <p>
-                In the app, both Penrose rhombus types are built on the same
-                base angle step: 180/5&deg; = 36&deg;. Each tile angle is an integer
-                multiple of that step (1x, 2x, and their complements):
+                Both tiles share the same edge length. Their angles are built on
+                a single base step of 36&deg;&thinsp;(=&thinsp;180&deg;&thinsp;&divide;&thinsp;5).
+                Every angle in both tiles is an integer multiple of that step:
               </p>
               <ul class="bullet-list">
                 <li>Thin: acute 36&deg;, obtuse 144&deg;</li>
                 <li>Thick: acute 72&deg;, obtuse 108&deg;</li>
               </ul>
               <p>
-                So if you rotate tiles in increments of 36&deg;, their edges and
-                corners stay on the same 5-fold angular grid and align/snap
-                correctly.
+                This 5-fold angle grid gives Penrose tilings their rotational
+                symmetry and keeps edges and corners aligned across the whole
+                plane. The result looks structured but is provably non-repeating
+                — order without periodicity.
               </p>
             </article>
             <article class="detail-card reveal visual-guide-card visual-guide-card-penrose">
@@ -214,6 +186,45 @@
               <div class="gallery-panel media-slot">
                 <img src="assets/math-penrose-guide.png" alt="Penrose tiling visual guide" />
                 <div class="media-placeholder">Add `assets/math-penrose-guide.png`</div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="spectre">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Spectre</p>
+            <a class="back-to-top" href="#page-top">Back to top ↑</a>
+          </div>
+          <div class="detail-grid">
+            <article class="detail-card reveal">
+              <p class="mini-label">1 tile &middot; Monotile</p>
+              <p>
+                The Spectre is a 14-sided polygon that tiles the plane using a
+                single shape. Like Penrose, the pattern is aperiodic — it never
+                repeats. Unlike Penrose, it needs no second tile type and no
+                edge-matching rules. One shape does everything.
+              </p>
+              <p>
+                It was discovered in 2023 by David Smith, Joseph Samuel Myers,
+                Craig&nbsp;S.&nbsp;Kaplan, and Chaim Goodman-Strauss — one of
+                the most significant results in tiling theory in decades. An
+                earlier finding from the same research, the Hat, required both
+                a tile and its mirror image to tile aperiodically. The Spectre
+                removes that requirement: a single shape, in a single
+                orientation, with no reflections needed.
+              </p>
+              <p>
+                There is no translational symmetry, no rotational repeat. The
+                Spectre is aperiodic at the most fundamental level — and it does
+                it alone.
+              </p>
+            </article>
+            <article class="detail-card reveal visual-guide-card visual-guide-card-spectre">
+              <p class="mini-label">Visual guide</p>
+              <div class="gallery-panel media-slot">
+                <img src="assets/math-spectre-guide.png" alt="Spectre tiling visual guide" />
+                <div class="media-placeholder">Add `assets/math-spectre-guide.png`</div>
               </div>
             </article>
           </div>

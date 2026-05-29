@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Penrose Tiles | Phi &amp; Form</title>
+    <title>Phi Tiles | Phi &amp; Form</title>
     <meta
       name="description"
-      content="Penrose Tiles is a Phi and Form app for exploring aperiodic tilings, symmetry, and patterned composition."
+      content="Phi Tiles is a Phi and Form app for composing with four families of geometric tiles: Mosaic, Rhombus, Penrose, and Spectre."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,8 +19,8 @@
     <link rel="shortcut icon" href="../favicon.ico?v=4" />
     <link rel="stylesheet" href="../styles.css?v=20260528" />
     <style>
-      /* Page-local guardrail: keep Penrose gallery as horizontal thumbnail rail */
-      .page-penrose #gallery .gallery-rail {
+      /* Page-local guardrail: keep Phi Tiles gallery as horizontal thumbnail rail */
+      .page-phi #gallery .gallery-rail {
         display: flex !important;
         flex-wrap: nowrap !important;
         --gallery-gap: 18px;
@@ -33,7 +33,7 @@
         padding: 0 0 10px 0 !important;
       }
 
-      .page-penrose #gallery .gallery-rail > .gallery-panel {
+      .page-phi #gallery .gallery-rail > .gallery-panel {
         flex: 0 0 196px !important;
         width: 196px !important;
         min-width: 196px !important;
@@ -43,55 +43,129 @@
         scroll-snap-align: start;
       }
 
-      .page-penrose #gallery .section-heading,
-      .page-penrose #gallery .gallery-rail,
-      .page-penrose #features .section-heading,
-      .page-penrose #features .penrose-feature-grid,
-      .page-penrose #support .section-heading,
-      .page-penrose #support .detail-grid {
+      .page-phi #gallery .section-heading,
+      .page-phi #gallery .gallery-rail,
+      .page-phi #features .section-heading,
+      .page-phi #features .penrose-feature-grid,
+      .page-phi #support .section-heading,
+      .page-phi #support .detail-grid {
         width: 100%;
         max-width: none;
       }
 
-      .page-penrose #features .penrose-feature-grid {
+      .page-phi #features .penrose-feature-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         justify-content: stretch;
         gap: 24px;
       }
 
-      .page-penrose #overview .hero-actions {
+      .page-phi #overview .hero-actions {
         margin-bottom: 28px;
       }
 
+      /* Tile family cards */
+      .tile-families {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 10px;
+        margin: 20px 0 28px;
+      }
+
+      .tile-family-pill {
+        display: flex;
+        flex-direction: column;
+        border: 1.5px solid rgba(255,255,255,0.14);
+        border-radius: 12px;
+        overflow: hidden;
+      }
+
+      .pill-preview {
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+      }
+
+      .pill-preview img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .pill-text {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        padding: 8px 12px 12px;
+        border-top: 1px solid rgba(255,255,255,0.08);
+      }
+
+      .pill-name {
+        font-weight: 700;
+        font-size: 0.88rem;
+        letter-spacing: 0.01em;
+      }
+
+      .pill-desc {
+        font-size: 0.76rem;
+        opacity: 0.55;
+      }
+
+      /* Origin callout */
+      .origin-callout {
+        border-left: 3px solid rgba(245, 196, 0, 0.5);
+        padding: 14px 20px;
+        margin: 32px 0 0;
+        border-radius: 0 8px 8px 0;
+        background: rgba(245, 196, 0, 0.05);
+      }
+
+      .origin-callout p {
+        margin: 0;
+        font-size: 0.88rem;
+        opacity: 0.75;
+        line-height: 1.55;
+      }
+
+      .origin-callout a {
+        color: inherit;
+        opacity: 1;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+      }
+
       @media (max-width: 1080px) {
-        .page-penrose #gallery .gallery-rail {
+        .page-phi #gallery .gallery-rail {
           justify-content: flex-start !important;
         }
 
-        .page-penrose #gallery .gallery-rail > .gallery-panel {
+        .page-phi #gallery .gallery-rail > .gallery-panel {
           flex-basis: 164px !important;
           width: 164px !important;
           min-width: 164px !important;
           max-width: 164px !important;
         }
 
-        .page-penrose #features .penrose-feature-grid {
+        .page-phi #features .penrose-feature-grid {
           grid-template-columns: 1fr;
           justify-content: stretch;
         }
       }
 
       @media (max-width: 760px) {
-        .page-penrose #gallery .gallery-rail > .gallery-panel {
+        .page-phi #gallery .gallery-rail > .gallery-panel {
           flex-basis: 146px !important;
           width: 146px !important;
           min-width: 146px !important;
           max-width: 146px !important;
         }
+
+        .tile-families {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
       }
     </style>
   </head>
-  <body class="page-penrose">
+  <body class="page-phi">
     <div class="page-shell app-shell">
       <div id="page-top"></div>
       <header class="site-header">
@@ -110,24 +184,76 @@
 
       <nav class="page-subnav" aria-label="Apps pages">
         <a href="../apps.html">All apps</a>
-        <a href="./phi-tiles.html">Phi Tiles</a>
-        <a href="./penrose-art.html" aria-current="page">Penrose Tiles</a>
+        <a href="./phi-tiles.html" aria-current="page">Phi Tiles</a>
+        <a href="./penrose-art.html">Penrose Tiles</a>
         <a href="./rhombi-tiles.html">Rhombi Tiles</a>
       </nav>
 
       <main>
         <section class="section app-hero" id="overview">
           <div class="app-hero-copy reveal">
-            <h1>Penrose Tiles</h1>
+            <h1>Phi Tiles</h1>
             <p class="app-summary">
-              Penrose Tiles is a Phi &amp; Form app for building visual
-              compositions from aperiodic tiling systems. It turns a
-              mathematically rigorous structure into something tactile,
-              exploratory, and aesthetically rewarding. By arranging Penrose
-              tiles directly, you can discover how local matching rules
-              generate intricate, non-repeating patterns and unexpected visual
-              harmony.
+              Phi Tiles brings together four families of geometric tiles into a
+              single composing environment. Move between Mosaic, Rhombus,
+              Penrose, and Spectre tiles — each with its own rules, its own
+              kind of order, and its own visual character. One app to explore
+              them all.
             </p>
+
+            <div class="tile-families" aria-label="Tile families">
+
+              <div class="tile-family-pill">
+                <div class="pill-preview">
+                  <img src="../assets/family-archimedean.png" alt="Mosaic tile family — six shapes on a 60° angle grid" />
+                </div>
+                <div class="pill-text">
+                  <span class="pill-name">Mosaic</span>
+                  <span class="pill-desc">6 tiles. Periodic.</span>
+                </div>
+              </div>
+
+              <div class="tile-family-pill">
+                <div class="pill-preview">
+                  <img src="../assets/family-rhombus.png" alt="Rhombus tile family — three rhombuses at different angles" />
+                </div>
+                <div class="pill-text">
+                  <span class="pill-name">Rhombus</span>
+                  <span class="pill-desc">3 tiles. Symmetric.</span>
+                </div>
+              </div>
+
+              <div class="tile-family-pill">
+                <div class="pill-preview">
+                  <img src="../assets/family-penrose.png" alt="Penrose tile family — thin and thick rhombuses" />
+                </div>
+                <div class="pill-text">
+                  <span class="pill-name">Penrose</span>
+                  <span class="pill-desc">2 tiles. Aperiodic.</span>
+                </div>
+              </div>
+
+              <div class="tile-family-pill">
+                <div class="pill-preview">
+                  <img src="../assets/family-spectre.png" alt="Spectre tile family — single irregular monotile" />
+                </div>
+                <div class="pill-text">
+                  <span class="pill-name">Spectre</span>
+                  <span class="pill-desc">1 tile. Monotile.</span>
+                </div>
+              </div>
+
+            </div>
+
+            <a
+              class="app-store-badge card-download"
+              href="https://apps.apple.com/app/6759627032"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src="../assets/app-store-badge.svg" alt="Download on the App Store" />
+              <span class="app-store-badge-fallback">Download on the App Store</span>
+            </a>
             <div class="hero-actions">
               <a class="button button-primary" href="#gallery">See the gallery</a>
               <a class="button button-ghost" href="#features">Explore features</a>
@@ -136,10 +262,9 @@
 
             <div class="origin-callout">
               <p>
-                Penrose Tiles has evolved. Its ideas now live in
-                <a href="./phi-tiles.html">Phi Tiles</a>,
-                our new app that brings together Mosaic, Rhombus, Penrose,
-                and Spectre tile families in one place.
+                Phi Tiles grew out of <a href="./penrose-art.html">Penrose Tiles</a>
+                and <a href="./rhombi-tiles.html">Rhombi Tiles</a>. The ideas from
+                both earlier apps have been unified and expanded here.
               </p>
             </div>
           </div>
@@ -148,7 +273,7 @@
             <div class="orb orb-large"></div>
             <div class="orb orb-small"></div>
             <div class="stage-card stage-card-single">
-              <div class="gallery-panel media-slot penrose-hero-media">
+              <div class="gallery-panel media-slot phi-hero-media">
                 <video
                   autoplay
                   loop
@@ -156,11 +281,11 @@
                   playsinline
                   webkit-playsinline
                   preload="auto"
-                  poster="../assets/penrose-gallery-00.png"
+                  poster="../assets/phi-gallery-00.png"
                 >
-                  <source src="../assets/penrose-gallery-00.mp4" type="video/mp4" />
+                  <source src="../assets/phi-gallery-00.mp4" type="video/mp4" />
                 </video>
-                <div class="video-fallback">Add `../assets/penrose-gallery-00.mp4`</div>
+                <div class="video-fallback">Add `../assets/phi-gallery-00.mp4`</div>
               </div>
             </div>
           </div>
@@ -170,10 +295,10 @@
           <div class="section-heading reveal">
             <p class="eyebrow">Gallery</p>
           </div>
-          <div class="gallery-rail" aria-label="Penrose media gallery">
+          <div class="gallery-rail" aria-label="Phi Tiles media gallery">
             <div class="gallery-panel media-slot">
-              <img src="../assets/penrose-gallery-01.png" alt="Penrose Tiles screenshot" />
-              <div class="media-placeholder">Add `../assets/penrose-gallery-01.png` (1170×2532)</div>
+              <img src="../assets/phi-gallery-01.png" alt="Phi Tiles screenshot" />
+              <div class="media-placeholder">Add `../assets/phi-gallery-01.png` (1170×2532)</div>
             </div>
             <div class="gallery-panel media-slot">
               <video
@@ -184,13 +309,13 @@
                 webkit-playsinline
                 preload="auto"
               >
-                <source src="../assets/penrose-gallery-02.mp4" type="video/mp4" />
+                <source src="../assets/phi-gallery-02.mp4" type="video/mp4" />
               </video>
-              <div class="video-fallback">Add `../assets/penrose-gallery-02.mp4` (1170×2532)</div>
+              <div class="video-fallback">Add `../assets/phi-gallery-02.mp4` (1170×2532)</div>
             </div>
             <div class="gallery-panel media-slot">
-              <img src="../assets/penrose-gallery-03.png" alt="Penrose Tiles composition detail" />
-              <div class="media-placeholder">Add `../assets/penrose-gallery-03.png` (1170×2532)</div>
+              <img src="../assets/phi-gallery-03.png" alt="Phi Tiles composition detail" />
+              <div class="media-placeholder">Add `../assets/phi-gallery-03.png` (1170×2532)</div>
             </div>
             <div class="gallery-panel media-slot">
               <video
@@ -201,13 +326,13 @@
                 webkit-playsinline
                 preload="auto"
               >
-                <source src="../assets/penrose-gallery-04.mp4" type="video/mp4" />
+                <source src="../assets/phi-gallery-04.mp4" type="video/mp4" />
               </video>
-              <div class="video-fallback">Add `../assets/penrose-gallery-04.mp4` (1170×2532)</div>
+              <div class="video-fallback">Add `../assets/phi-gallery-04.mp4` (1170×2532)</div>
             </div>
             <div class="gallery-panel media-slot">
-              <img src="../assets/penrose-gallery-05.png" alt="Penrose Tiles gallery image 05" />
-              <div class="media-placeholder">Add `../assets/penrose-gallery-05.png` (1170×2532)</div>
+              <img src="../assets/phi-gallery-05.png" alt="Phi Tiles gallery image 05" />
+              <div class="media-placeholder">Add `../assets/phi-gallery-05.png` (1170×2532)</div>
             </div>
           </div>
         </section>
@@ -218,6 +343,26 @@
             <a class="back-to-top" href="#page-top">Back to top ↑</a>
           </div>
           <div class="penrose-feature-grid">
+
+            <article class="detail-card penrose-feature-card reveal">
+              <div class="feature-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 96 96" focusable="false" aria-label="Four tile families icon">
+                  <rect width="96" height="96" fill="#111318" />
+                  <polygon points="48,48 35,30 48,12 61,30" fill="#F5C400" stroke="#111318" stroke-width="1.5" stroke-linejoin="round"/>
+                  <polygon points="48,48 61,30 82,37 69,55" fill="#F5C400" fill-opacity="0.45" stroke="#111318" stroke-width="1.5" stroke-linejoin="round"/>
+                  <polygon points="48,48 69,55 69,77 48,70" fill="#F5C400" stroke="#111318" stroke-width="1.5" stroke-linejoin="round"/>
+                  <polygon points="48,48 48,70 27,77 27,55" fill="#F5C400" fill-opacity="0.45" stroke="#111318" stroke-width="1.5" stroke-linejoin="round"/>
+                  <polygon points="48,48 27,55 14,37 35,30" fill="#F5C400" stroke="#111318" stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3>Four Tile Families</h3>
+              <p>
+                Switch between Mosaic, Rhombus, Penrose, and Spectre
+                families without leaving the app. Each family has its own
+                matching rules, its own geometry, and its own visual logic.
+              </p>
+            </article>
+
             <article class="detail-card penrose-feature-card reveal">
               <div class="feature-icon-wrap" aria-hidden="true">
                 <svg viewBox="0 0 96 96" focusable="false" aria-label="Pattern Mode icon">
@@ -269,7 +414,7 @@
               <h3>Color</h3>
               <p>
                 Long press a tile to open the color picker and build palettes
-                that reveal structure and rhythm.
+                that reveal structure and rhythm across any tile family.
               </p>
             </article>
 
@@ -349,9 +494,10 @@
               <h3>Browse</h3>
               <p>
                 Open the Library for saved designs or the Gallery for built‑in
-                compositions ready to explore.
+                compositions ready to explore, across all tile families.
               </p>
             </article>
+
           </div>
         </section>
 
@@ -362,10 +508,10 @@
           </div>
           <div class="detail-grid">
             <article class="detail-card reveal">
-              <h2>Need help with Penrose Tiles?</h2>
+              <h2>Need help with Phi Tiles?</h2>
               <p>
-                For questions, feedback, or technical issues with Penrose
-                Tiles, please contact:
+                For questions, feedback, or technical issues with Phi Tiles,
+                please contact:
               </p>
               <p>
                 <a class="text-link" href="mailto:support@phiandform.com">support@phiandform.com</a>

@@ -17,7 +17,7 @@
     <link rel="icon" type="image/x-icon" href="./favicon.ico?v=4" />
     <link rel="icon" type="image/png" href="./assets/favicon.png?v=4" />
     <link rel="shortcut icon" href="./favicon.ico?v=4" />
-    <link rel="stylesheet" href="./styles.css?v=20260331" />
+    <link rel="stylesheet" href="./styles.css?v=20260528" />
   </head>
   <body>
     <div id="page-top"></div>
@@ -39,7 +39,7 @@
       <nav class="page-subnav" aria-label="Overview sections">
         <a href="#page-top"><span class="subnav-label-full">Mathematics as visual art</span><span class="subnav-label-short">Math art</span></a>
         <a href="#studio">Studio</a>
-        <a href="#apps">New Apps</a>
+        <a href="#apps">Apps</a>
       </nav>
 
       <main>
@@ -194,25 +194,25 @@
                     playsinline
                     webkit-playsinline
                     preload="auto"
-                    poster="assets/screenshot-01.png"
                   >
-                    <source src="assets/movie-01.MP4" type="video/mp4" />
+                    <source src="assets/featured-app-movie.mp4" type="video/mp4" />
                   </video>
-                  <div class="video-fallback">Add `assets/movie-01.MP4`</div>
+                  <div class="video-fallback">Add `assets/featured-app-movie.mp4`</div>
                 </div>
                 <div class="stage-copy">
-                  <h2>Penrose Tiles</h2>
+                  <h2>Phi Tiles</h2>
                   <p>
-                    Create aperiodic compositions with Penrose tiles and
-                    explore the geometry behind them.
+                    Compose with four families of geometric tiles — Mosaic,
+                    Rhombus, Penrose, and Spectre — each with its own
+                    rules and visual character.
                   </p>
                   <ul class="stage-support">
-                    <li>Penrose tiling</li>
-                    <li>2 tile types</li>
-                    <li>Non-repeating order</li>
+                    <li>4 tile families</li>
+                    <li>Aperiodic &amp; periodic</li>
+                    <li>One composing space</li>
                   </ul>
                   <div class="stage-actions">
-                    <a class="button button-primary stage-button" href="./apps/penrose-art.html">Learn more</a>
+                    <a class="button button-primary stage-button" href="./apps/phi-tiles.html">Learn more</a>
                     <a
                       class="app-store-badge"
                       href="https://apps.apple.com/app/6759627032"
@@ -266,10 +266,10 @@
               <p class="mini-label">The vision</p>
               <h3>A growing collection of apps where every pattern has a story.</h3>
               <p>
-                Rhombus tilings today. Penrose patterns tomorrow. Fractals,
-                spirals, tessellations: each one offers a new way to explore
-                the hidden architecture of the world. Every app opens onto a
-                different corner of mathematical beauty.
+                Four tile families are just the beginning. Fractals, spirals,
+                tessellations: each one offers a new way to explore the hidden
+                architecture of the world. Every app opens onto a different
+                corner of mathematical beauty.
               </p>
             </article>
           </div>
@@ -277,7 +277,66 @@
 
         <section class="section" id="apps">
           <div class="section-heading reveal">
-            <p class="eyebrow">New Apps</p>
+            <p class="eyebrow">Apps</p>
+          </div>
+          <div class="app-grid">
+            <article class="app-card app-card-feature reveal">
+              <div class="app-card-main">
+                <div class="app-media">
+                  <div class="media-slot media-slot-tall">
+                    <img src="assets/phi-tiles-choice-01.png" alt="Phi Tiles screenshot" />
+                    <div class="media-placeholder">Add `assets/phi-tiles-choice-01.png`</div>
+                  </div>
+                </div>
+                <div class="app-copy">
+                  <h3>Phi Tiles</h3>
+                  <p>
+                    Compose with four families of geometric tiles — Mosaic,
+                    Rhombus, Penrose, and Spectre — each with its own rules
+                    and visual character. One app to explore them all.
+                  </p>
+                  <ul class="tag-list">
+                    <li>4 tile families</li>
+                    <li>Aperiodic &amp; periodic</li>
+                    <li>One composing space</li>
+                  </ul>
+                  <div class="card-actions">
+                    <a class="button button-primary" href="./apps/phi-tiles.html">Learn more</a>
+                  </div>
+                  <a
+                    class="app-store-badge card-download"
+                    href="https://apps.apple.com/app/6759627032"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src="assets/app-store-badge.svg" alt="Download on the App Store" />
+                    <span class="app-store-badge-fallback">Download on the App Store</span>
+                  </a>
+                </div>
+              </div>
+              <div class="app-card-side">
+                <div class="app-side-media">
+                  <video autoplay loop muted playsinline>
+                    <source src="assets/phi-tiles-effects.mp4" type="video/mp4" />
+                  </video>
+                </div>
+                <div class="app-side-copy">
+                  <p class="mini-label">Render &amp; Export</p>
+                  <p>
+                    Apply animated rendering effects to any composition and
+                    export as video. Each mode transforms your tiles differently —
+                    particles in motion, light traces, sphere mapping — turning a
+                    static pattern into something that moves.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="earlier-apps">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Earlier Apps</p>
           </div>
           <div class="app-grid">
             <article class="app-card reveal">
@@ -290,9 +349,9 @@
               <div class="app-copy">
                 <h3>Penrose Tiles</h3>
                 <p>
-                  Create aperiodic compositions with Penrose tiles and explore
-                  the geometry behind them. Discover how two tile types create
-                  non-repeating order.
+                  The original Phi &amp; Form app. Build aperiodic compositions
+                  with Penrose tiles and discover how two tile types create
+                  non-repeating order. Its ideas have evolved into Phi Tiles.
                 </p>
                 <ul class="tag-list">
                   <li>Penrose tiling</li>
@@ -301,17 +360,7 @@
                 </ul>
                 <div class="card-actions">
                   <a class="button button-primary" href="./apps/penrose-art.html">Learn more</a>
-                  <a class="button button-secondary" href="./apps/penrose-art.html#mathematics">View the math</a>
                 </div>
-                <a
-                  class="app-store-badge card-download"
-                  href="https://apps.apple.com/app/6759627032"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img src="assets/app-store-badge.svg" alt="Download on the App Store" />
-                  <span class="app-store-badge-fallback">Download on the App Store</span>
-                </a>
               </div>
             </article>
 
@@ -325,9 +374,9 @@
               <div class="app-copy">
                 <h3>Rhombi Tiles</h3>
                 <p>
-                  Build compositions from rhombus tilings and explore how
-                  simple tile combinations create symmetry and variation.
-                  Discover how three tile types generate symmetry across the composition.
+                  Explore rhombus tilings and discover how three tile types
+                  generate symmetry and variation. Its ideas have evolved
+                  into Phi Tiles.
                 </p>
                 <ul class="tag-list">
                   <li>Rhombus tiling</li>
@@ -336,17 +385,7 @@
                 </ul>
                 <div class="card-actions">
                   <a class="button button-primary" href="./apps/rhombi-tiles.html">Learn more</a>
-                  <a class="button button-secondary" href="./apps/rhombi-tiles.html#mathematics">View the math</a>
                 </div>
-                <a
-                  class="app-store-badge card-download"
-                  href="#"
-                  aria-disabled="true"
-                  tabindex="-1"
-                >
-                  <img src="assets/app-store-badge.svg" alt="Download on the App Store" />
-                  <span class="app-store-badge-fallback">Download on the App Store</span>
-                </a>
               </div>
             </article>
           </div>
